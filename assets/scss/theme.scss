@@ -254,6 +254,113 @@ main#main-content {
     z-index: -1;
 }
 
+.card-figcaption {
+    display: block;
+    margin: 0;
+    pointer-events: none;
+    opacity: 1;
+    display: none;
+}
+[data-content-region="home_policy_block--global"] {
+    margin: 0 !important;
+}
+[data-content-region="home_policy_block"] {
+    margin: 0 !important;
+}
+.tab-content {
+    display: none;
+    padding: 0;
+}
+
+p.footer-info__phone {
+    display: none !important;
+}
+.halo-block.halo-block-product .halo-block-header {
+    margin: 0 0 0px 0;
+}
+.halo-block-header h3 {
+    font-size: 38px !important;
+    font-family: 'Roboto Condensed' !important;
+    letter-spacing: 4px !important;
+}.productCarousel-tabs .tabs .tab.is-active .tab-title {
+    font-weight: 600;
+    color: #fff;
+    border-color: #000;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+.halo-block-header .title {
+    
+    margin-bottom: 20px;
+}
+.footer {
+    background-color: #fff;
+    border-top: none;
+    position: relative;
+    margin: 0 !important;
+}
+
+
+.productCarousel-tabs .tabs .tab-title {
+    padding-left: 0px;
+    padding-right: 0px;
+    line-height: 1.625;
+    white-space: unset;
+    overflow: unset;
+    text-overflow: unset;
+    border: none;
+    color: #808080;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed';
+    min-width:220px;
+}
+
+.card-title>a
+{
+    padding:0;
+}
+.card-title>a span {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+figure.card-figure {
+    background: #ededed;
+    border-radius: 20px 20px 0 0px;
+    padding: 20px;
+}
+.card-price span {
+    color: #757575;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Roboto Condensed';
+}
+.card-title {
+    padding: 0;
+    margin: 0;
+    overflow-wrap: break-word;
+}
+.card-mta {
+    display: block;
+    width: 100%;
+    background: red;
+    position: relative;
+    text-align: center;
+    padding: 7px 0px;
+    line-height: unset;
+    height: unset;
+    bottom: 0;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+
+
 
 @media(max-width:768px){
 .deskshow {
@@ -262,4 +369,36 @@ main#main-content {
 .mobshow {
     display: block !important;
 }
+
+.header-logo-image-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    min-width: auto;
+}
+.header-logo-image {
+    max-height: 1.9375rem;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.homebanner {
+    padding: 0 0px;
+    margin: 0 auto;
+    width: 100%;
+}.homelinks {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    padding: 0px;
+}
+.halo-block-product {
+    padding: 0px 0;
+}
+
 }
