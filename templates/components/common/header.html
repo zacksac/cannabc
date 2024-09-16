@@ -25,17 +25,7 @@
                         <span class="mobileMenu-toggleIcon">{{lang 'common.toggle_menu'}}</span>
                     </a>
                 </div>
-                <div class="middleHeader-item__item item--searchMobile">
-                    <a class="navUser-action" href="#" data-search="quickSearch" aria-controls="quickSearch" aria-expanded="false">
-                        <div class="navUser-icon">
-                            <svg class="icon" role="img" aria-label="{{lang 'search.quick_search.input_label'}}">
-                                <title>{{lang 'search.quick_search.input_label'}}</title>
-                                <desc>{{lang 'search.quick_search.input_placeholder'}}</desc>
-                                <use xlink:href="#icon-search"></use>
-                            </svg>
-                        </div>
-                    </a>
-                </div>
+              
             </div>
             <div class="middleHeader-item text-center">
                 <div class="middleHeader-item__item item--logo">
@@ -51,7 +41,18 @@
                 </div>
             </div>
             <div class="middleHeader-item text-right">
-                <div class="middleHeader-item__item item--account">
+                  <div class="middleHeader-item__item item--searchMobile">
+                    <a class="navUser-action" href="#" data-search="quickSearch" aria-controls="quickSearch" aria-expanded="false">
+                        <div class="navUser-icon">
+                            <svg class="icon" role="img" aria-label="{{lang 'search.quick_search.input_label'}}">
+                                <title>{{lang 'search.quick_search.input_label'}}</title>
+                                <desc>{{lang 'search.quick_search.input_placeholder'}}</desc>
+                                <use xlink:href="#icon-search"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="middleHeader-item__item item--account" style="display:none;">
                     <a class="navUser-action" {{#if customer}}href="{{urls.account.index}}"{{else}}href="{{urls.auth.login}}"{{/if}} aria-label="{{lang 'common.login'}}" data-login-form>
                         <div class="navUser-icon">
                             <svg class="icon" role="img" aria-label="{{lang 'common.account'}}">

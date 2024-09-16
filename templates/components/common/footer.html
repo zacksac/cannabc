@@ -17,7 +17,7 @@
     <div class="container">
         <section class="footer-info{{#all (if theme_settings.footer_info_logo) (if theme_settings.footer-info-1-heading) (if theme_settings.footer-info-2-heading) (if theme_settings.footer-info-3-heading) (if theme_settings.footer-info-4-heading)}} footer-info-show-all{{else}} footer-info-no-show-all{{/all}}">
             {{#if theme_settings.footer_info_logo}}
-                <article class="footer-info-col footer-info-col--small halo-fadeInUp" data-halo-animate="1" data-section-type="storeInfo">
+                <article class="footer-info-col "  data-section-type="storeInfo">
                     {{#if theme_settings.footer_info_logo}}
                         <div class="footer-info__logo">
                            <div class="t4s-footer-raw-html t4s-rte t4s-hidden-mobile-false" style="--animation: ;--delay-animation:s;">
@@ -57,7 +57,7 @@
             {{/if}}
 
             {{#if theme_settings.footer-info-1-heading}}
-                <article class="footer-info-col footer-info-col--small halo-fadeInUp" data-halo-animate="2" data-section-type="footer-categories">
+                <article class="footer-info-col open-dropdown"  data-section-type="footer-categories">
                     <h3 class="footer-info-heading footer-info-heading--toggle">{{theme_settings.footer-info-1-heading}}</h3>
                     <ul class="footer-info-list">
                         {{#each (limit categories theme_settings.categories_show_footer_limit)}}

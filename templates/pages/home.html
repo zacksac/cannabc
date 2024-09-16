@@ -13,7 +13,7 @@ blog:
         summary: {{theme_settings.blog_sDescLimit}}
 ---
 {{#partial "hero"}}
-    {{{region name="home_below_menu"}}}
+    {{{region name="home_below_menu--global"}}}
 
     {{#if theme_settings.halo_homepage_layout_1}}
         {{{region name="home_service_1"}}}
@@ -65,7 +65,7 @@ blog:
             {{/if}}
 
             {{{region name="home_banner_7"}}}
-
+        <div class="hb" style="display:none;">
             {{#if theme_settings.home_product_block-1 '==' 'Featured'}}
                 {{> components/products/featured
                     products=products.featured
@@ -170,6 +170,7 @@ blog:
                     block_layout=theme_settings.home_product_block_4_layout
                 }}
             {{/if}}
+        </div>
 
             {{> components/halothemes/home/home-recent-posts post=blog.recent_posts}}
 
