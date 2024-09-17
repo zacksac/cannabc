@@ -362,6 +362,149 @@ figure.card-figure {
 
 
 
+
+
+
+
+
+.productView-wrapper-details {
+    background: #f2f2f2;
+    padding: 40px;
+    border-radius: 20px;
+}
+.productView-title {
+    font-family: 'Roboto Condensed';
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0;
+    color: #000;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid;
+    padding-top: 30px;
+}
+.halo-productView-right {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    margin-top: 0;
+    margin-right: 0;
+    padding: 0 0 0 30px;
+}
+label#rectangle-group-label {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: 'Roboto Condensed';
+}
+label.form-option.form-option-rectangle > span {
+    padding: 0 15px !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    font-family: 'Roboto';
+}
+.halo-productOptions .form-option-variant:after {
+    z-index:-1;
+    background-color: white;
+   
+}
+
+.productView-actions .form-field--increments .form-input--incrementTotal {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    width: 105px;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 30px;
+    line-height: 1;
+    max-width: 100%;
+    border-radius: 7px;
+}
+#form-action-addToCart.button.button--secondary {
+    color: black;
+    background-color: white;
+    border-color: black;
+    border-radius: 7px;
+}
+[data-product-option-change] .form-field {
+    border-bottom: 1px solid;
+}
+.form-radio:checked+.form-option span:after {
+    background: black;
+}.form-radio:checked+.form-option span {
+    color: white !important;
+    z-index: 8;
+}.productView-options .form .form-field .form-label [data-option-value] {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: #000;
+    text-transform: capitalize;
+    margin: 0 0 0 6px;
+    font-style: italic;
+    display: none;
+}.productView-options .form .form-field .form-label small {
+    display: block;
+    color: #f1152f;
+    line-height: inherit;
+    margin: 0 0 0 3px;
+    float: none;
+    display: none;
+}
+
+figure.productView-image {
+    max-width: 465px;
+}
+
+
+
+
+
+
+@media(min-width:1600px){
+    
+
+    .halo-productView-top .container {
+    padding: 0;
+    max-width: 1300px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media(max-width:768px){
 .deskshow {
     display: none;

@@ -277,7 +277,7 @@
                                 </span>
                             {{/if}}
                             {{#if settings.show_product_reviews}}
-                                <span class="productView-reviewLink">
+                                <span class="productView-reviewLink" style="display:none;">
                                     <a href="{{product.url}}{{#if is_ajax}}#write_review{{/if}}"
                                        {{#unless is_ajax }}data-reveal-id="modal-review-form"{{/unless}}>
                                        <span>{{lang 'products.reviews.new'}}</span>
@@ -293,11 +293,11 @@
                         {{/unless}}
                     </div>
                     {{#if theme_settings.productView_desShort}}
-                        <div class="productView-desShort">
+                        <div class="productView-desShort" style="display:none;">
                             <span>{{{ellipsis product.description 160}}}</span>
                         </div>
                     {{/if}}
-                    <div class="productView-info">
+                    <div class="productView-info" style="display:none;">
                         <div class="productView-info-item">
                             <span class="productView-info-name sku-label">{{lang 'products.sku'}}</span>
                             <span class="productView-info-value" data-product-sku>{{product.sku}}</span>
@@ -493,7 +493,9 @@
                         {{/if}}
                     </form>
                     {{#if settings.show_wishlist}}
+                    <div style="display:none;">
                         {{> components/common/wishlist-dropdown}}
+                    </div>
                     {{/if}}
                     {{#if theme_settings.show_halo_share}}
                         {{> components/common/share url=product.url layout="product-view"}}
@@ -511,7 +513,7 @@
                 </div>
                 {{> components/halothemes/product/halo-product-security-image}}
                 {{#if theme_settings.show_product_details_tabs}}
-                    <div class="productView-tab halo-description">
+                    <div class="productView-tab halo-description" style="display:none;">
                         {{> components/products/description-tabs}}
                     </div>
                 {{/if}}
