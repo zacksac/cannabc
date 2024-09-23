@@ -11,6 +11,23 @@ product:
 products:
     new:
         limit: 25
+
+gql: 'query metafields($productId: Int!) {
+    site {
+        product(entityId: $productId) {
+            metafields(namespace: "ct_metafields", keys: ["pteffect","DISCLAIMER"]) {
+                edges {
+                    node {
+                        key
+                        value
+                    }
+                }
+            }
+        }
+
+    }
+}'
+
 ---
 {{inject 'productId' product.id}}
 

@@ -259,6 +259,43 @@
                         </h2>
                     {{/if}}
                     <h1 class="productView-title">{{product.title}}</h1>
+
+                       <div class="prdeffect">
+                        <div class="prdefpe">
+                            {{#each gql.data.site.product.metafields.edges}}
+                                {{#with node}}
+                                    {{#if key '==' 'pteffect'}}
+
+                                   
+                                     
+                                    {{#JSONparse value}}
+                                              
+                                        {{#each this}}
+                                            <img src="{{null}}">
+                                        {{/each}}
+
+                                     {{/JSONparse}} 
+                                    
+
+
+
+                                    {{/if}}
+                                     
+                                {{/with}}
+                            {{/each}}
+                        </div>
+                       </div>
+
+                       {{#each gql.data.site.product.metafields.edges}}
+    {{#with node}}
+        {{#if key '==' 'DISCLAIMER'}}
+           <div class="des"> {{value}}
+             -----------------------------------
+           </div>
+        {{/if}}
+    {{/with}}
+{{/each}}
+
                     <div class="productView-topInfo">
                         <div class="productView-rating">
                             {{#if settings.show_product_rating}}
@@ -524,3 +561,6 @@
         {{> components/halothemes/product/halo-sticky-add-to-cart}}
     {{/if}}
 </div>
+
+
+
