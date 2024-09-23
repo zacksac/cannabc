@@ -474,6 +474,47 @@ figure.productView-image {
 }.prdefpe img {
     max-width: 120px;
 }
+.psd {
+    color: white;
+    line-height: 20px;
+    border-top: 2px solid black;
+    padding-top: 10px;
+}
+.psd div {
+    margin: 0;
+    font-size: 11px;
+    line-height: 13px;
+    padding-top: 5px;
+    color: black;
+    font-weight:600;
+}
+.psd h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.psd h4{
+    font-size:18px;
+    font-weight:bold;
+
+}
+
+
+
+
+
+
+
+@media (min-width: 1400px) {
+    .halo-productView-left {
+        width: 628px;
+        top: 90px;
+    }
+}
+
+
 
 
 

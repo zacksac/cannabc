@@ -28,6 +28,7 @@ export function optionChangeDecorator(areDefaultOtionsSet) {
             this.updateDefaultAttributesForOOS(attributesData);
         }
     };
+    
 }
 
 export default class ProductDetailsBase {
@@ -99,6 +100,7 @@ export default class ProductDetailsBase {
 
         $('[data-product-attribute-value]', this.$scope).each((i, attribute) => {
             const $attribute = $(attribute);
+
             const attrId = parseInt($attribute.data('productAttributeValue'), 10);
 
 

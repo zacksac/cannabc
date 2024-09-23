@@ -7,7 +7,7 @@ window.jquery = $;
 
 import './custom';
 
-
+import utils from 'bigcommerce/stencil-utils';
 const getAccount = () => import('./theme/account');
 const getLogin = () => import('./theme/auth');
 const noop = null;
@@ -101,3 +101,6 @@ window.stencilBootstrap = function stencilBootstrap(pageType, contextJSON = null
         },
     };
 };
+
+
+console.log("Bearer {{ settings.storefront_api.token }}");

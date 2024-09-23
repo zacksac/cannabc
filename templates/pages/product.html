@@ -12,29 +12,29 @@ products:
     new:
         limit: 25
 
-gql: 'query metafields($productId: Int!) {
-    site {
-        product(entityId: $productId) {
-            metafields(namespace: "ct_metafields", keys: ["pteffect","DISCLAIMER"]) {
-                edges {
-                    node {
-                        key
-                        value
-                    }
-                }
-            }
-        }
 
-    }
-}'
+gql:'query metafields($productId: Int!) {
+        site {
+          product(entityId: $productId) {
+            metafields(namespace:"ct_metafields",keys:["pteffect","DISCLAIMER","pbadges","hwtuse","pfaq","cbann","Cannabinoids","colpg","minfo"]) { 
+            edges {
+              node {
+                key
+                value
+              }
+            }
+          }
+        }
+      }'
 
 ---
+
 {{inject 'productId' product.id}}
 
 {{#partial "page"}}
     <div class="halo-productView-top">
         <div class="container">
-            <div class="breadcrumbs-product">
+            <div class="breadcrumbs-product" style="display:none;">
                 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}} 
             </div>
 
@@ -44,10 +44,21 @@ gql: 'query metafields($productId: Int!) {
 
             {{> components/halothemes/product/halo-bundle-products}}
 
-            <div class="productView-tab productView-tab-2 halo-description">
+            <div class="productView-tab productView-tab-2 halo-description" style="display:none;">
                 {{> components/products/description-tabs-2}}
             </div>
         </div>
+    </div>
+    <div class="prod_des">
+    {{#each gql.data.site.product.metafields.edges}}
+        {{#with node}}
+            {{#if key '==' 'desblock'}}
+                {{value}}
+               
+            {{/if}}
+        {{/with}}
+         test{{json this}}
+    {{/each}}
     </div>
 
     <div class="halo-productView-bottom">
@@ -100,3 +111,79 @@ gql: 'query metafields($productId: Int!) {
     {{> components/products/schema}}
 {{/partial}}
 {{> layout/base}}
+
+
+<script>
+
+
+
+    var xx='{{product.id}}';
+    var query=`query MyFirstQuery {
+        site {
+          product(entityId:`+xx+`){ 
+            variants{
+              edges{
+                node{
+                    sku
+                  metafields(namespace: "ct_metafields", keys: ["desblock"]) {
+                    edges{
+                      node{
+
+                        key
+                        value
+                      }
+                    }
+                  } 
+                }
+              }
+            }
+          }
+        }
+      }`;
+    console.log(xx);
+      fetch('/graphql', {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer {{ settings.storefront_api.token }}' // use auto-generated token
+    },
+    body: JSON.stringify({
+      query: query
+    })
+  })
+
+  .then(res => res.json())
+  .then(data => console.log(data)) // will log JSON result to browser console
+  .catch(error => console.error(error));
+
+
+
+
+
+    const $productId = '{{product.id}}';
+
+
+
+    (function() {
+var target = document.querySelector('.productView-info-value');
+
+// Create an observer instance.
+var observer = new MutationObserver(function(mutations) {
+    var sku=target.innerText;
+
+    
+});
+
+// Pass in the target node, as well as the observer options.
+observer.observe(target, {
+    attributes:    true,
+    childList:     true,
+    characterData: true
+});
+
+})();
+ 
+
+
+</script>

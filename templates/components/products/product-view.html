@@ -286,18 +286,9 @@
                         </div>
                        </div>
 
-                       {{#each gql.data.site.product.metafields.edges}}
-    {{#with node}}
-        {{#if key '==' 'DISCLAIMER'}}
-           <div class="des"> {{value}}
-             -----------------------------------
-           </div>
-        {{/if}}
-    {{/with}}
-{{/each}}
-
+                     
                     <div class="productView-topInfo">
-                        <div class="productView-rating">
+                        <div class="productView-rating" style="display:none;">
                             {{#if settings.show_product_rating}}
                                 {{> components/products/ratings rating=product.rating}}
                                 <span class="productView-reviewLink review-link">
@@ -334,7 +325,7 @@
                             <span>{{{ellipsis product.description 160}}}</span>
                         </div>
                     {{/if}}
-                    <div class="productView-info" style="display:none;">
+                    <div class="productView-info" >
                         <div class="productView-info-item">
                             <span class="productView-info-name sku-label">{{lang 'products.sku'}}</span>
                             <span class="productView-info-value" data-product-sku>{{product.sku}}</span>
@@ -538,6 +529,19 @@
                         {{> components/common/share url=product.url layout="product-view"}}
                     {{/if}}
                 </div>
+                <div class="psd">
+                    <h4>DISCLAIMER:</h4>
+                  {{#each gql.data.site.product.metafields.edges}}
+                        {{#with node}}
+                            {{#if key '==' 'DISCLAIMER'}}
+                               <div class="des"> {{value}}
+                               
+                               </div>
+                            {{/if}}
+                        {{/with}}
+                    {{/each}}
+                    </div>
+
                 {{> components/halothemes/product/halo-notify-me-out-of-stock}}
 
                 <div class="productView-info-bottom">
