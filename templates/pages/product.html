@@ -13,22 +13,29 @@ products:
         limit: 25
 
 
-gql:'query metafields($productId: Int!) {
-        site {
-          product(entityId: $productId) {
-            metafields(namespace:"ct_metafields",keys:["pteffect","DISCLAIMER","pbadges","hwtuse","pfaq","cbann","Cannabinoids","colpg","minfo"]) { 
-            edges {
-              node {
-                key
-                value
-              }
-            }
+gql: 'query productById($productId: Int!) {
+  site { 
+    product(entityId: $productId) {
+      metafields(namespace: "ct_metafields", keys: ["pteffect","DISCLAIMER","pbadges","hwtuse","pfaq","cbann","Cannabinoids","colpg","minfo"]) {
+        edges {
+          node {
+            id
+            key
+            value
           }
         }
-      }'
+      }
+    }
+  }
+}
+'     
+
+
+
+
 
 ---
-
+  
 {{inject 'productId' product.id}}
 
 {{#partial "page"}}
