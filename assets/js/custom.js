@@ -73,4 +73,12 @@ setTimeout(function(){
 }, 1000);
   
 
-
+jQuery(".accordion_head").on("click", function() {
+    jQuery(".accordion_body").is(":visible") && (jQuery(".accordion_body").slideUp(300),
+    jQuery(".plusminus").text("+")),
+    jQuery(this).next(".accordion_body").is(":visible") ? (jQuery(this).next(".accordion_body").slideUp(300),
+    jQuery(this).children(".plusminus").text("+"),
+    jQuery(this).removeClass("active")) : (jQuery(this).next(".accordion_body").slideDown(300),
+    jQuery(this).children(".plusminus").text("-"),
+    jQuery(this).addClass("active"))
+})

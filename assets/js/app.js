@@ -7,7 +7,7 @@ window.jquery = $;
 
 import './custom';
 
-import utils from 'bigcommerce/stencil-utils';
+
 const getAccount = () => import('./theme/account');
 const getLogin = () => import('./theme/auth');
 const noop = null;

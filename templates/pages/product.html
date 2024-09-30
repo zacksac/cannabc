@@ -56,17 +56,297 @@ gql: 'query productById($productId: Int!) {
             </div>
         </div>
     </div>
+
+
+
+
     <div class="prod_des">
-    {{#each gql.data.site.product.metafields.edges}}
-        {{#with node}}
-            {{#if key '==' 'desblock'}}
-                {{value}}
+   
+     <div class="pfeatures v-39818370515037" style="">
+      <div class="pfcon">
+        <div class="pdf" style="">
+          <h2>PRODUCT DESCRIPTION</h2>
+          <div class="con">
+           
+          </div>
+        </div>
+        <div class="pad" style="">
+          <h2>PRODUCT INGREDIENTS</h2>
+          <div class="con">
+           
+          </div>
+        </div>
+        <div class="pbu" style="">
+          <h2>PRODUCT DOCUMENTATION</h2>
+          <div class="con anadoc">
+            <div class="ad1">
+              <span>COA:</span>
+              <div class="dr">
+                <a target="_blank" class="viewr" href="" rel="noopener" aria-describedby="a11y-new-window-external-message">VIEW REPORT</a>
+
+                 <a class="adl" href="/pages/product-documentation">Click Here to See Our Document Database</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+
+
+
+
+     <div class="prod_logos">
+              <div class="row prod-imgs">
+  
+                   
+                    {{#each gql.data.site.product.metafields.edges}}
+                                    {{#with node}}
+                                        {{#if key '==' 'pbadges'}}
+                                         {{#JSONparse value}}
+                                                                              
+                                             {{#each this}}
+                                             <div class="column">
+                                                 <img src="{{bdimg}}">
+                                                   </div>
+                                              {{/each}}
+
+                                           {{/JSONparse}} 
+                                              
+                                        {{/if}}
+                                    {{/with}}
+                                {{/each}}
+                   
+                      
+                         
+               </div>
+      </div>
+
+
+
+
+
+
+
+
+
+        <div class="hwto">
+               <div class="hwtusecon" style=""> 
+                 <div class="hwtuse">
+                     {{#each gql.data.site.product.metafields.edges}}
+                        {{#with node}}
+                            {{#if key '==' 'hwtuse'}}
+                              
+                             {{#JSONparse value}}
+                               
+                               <div class="hwone">
+
+                     
+
+                                   <h4>
+                              {{{hwti}}}
+                                </h4>
+                                    
+                        <div class="steps">
+                                            <div class="step1">
+                            <h2>1.</h2>
+                             <div class="st">
+                                {{{step1}}}
+                            </div>
+                            </div>
+                                           <div class="step2">
+                            <h2>2.</h2>
+                             <div class="st">
+                                {{{step2}}}
+                            </div>
+                            </div>
+                                             <div class="step3">
+                            <h2>3.</h2>
+                            <div class="st">
+                             {{{step3}}}
+                            </div>
+                            </div>
+                          </div>
+                      
+                    </div>
+                            
+                    <div class="hwtwo">
+                         <img data-src="" class=" ls-is-cached lazyloaded" src="{{{img}}}"><noscript><img src="{{{img}}}"></noscript>
+                       
+                    </div>
+
+                            {{/JSONparse}} 
+                            
+                            
+                            {{/if}}
+                        {{/with}}
+
+                    {{/each}}
+                   
+                    
+                </div>
+                
+                </div>
+              
+</div>
+
+
+
+<div class="p_banner">
+
+
+      {{#each gql.data.site.product.metafields.edges}}
+            {{#with node}}
+                {{#if key '==' 'cbann'}}
                
+                {{#JSONparse value}}
+                     <img class="desk_show" src="{{bands}}">
+        <img class="mob_show" style="display:none;" src=" {{banmo}}">
+                    
+                   
+                     {{/JSONparse}} 
+                {{/if}}
+            {{/with}}
+        {{/each}}
+       
+</div>
+
+
+
+
+
+
+
+<div class="abcb">
+
+     {{#each gql.data.site.product.metafields.edges}}
+        {{#with node}}
+            {{#if key '==' 'Cannabinoids'}}
+                
+                 {{#JSONparse value}}
+                    
+                    {{#each this}}
+                    <div class="abcbitem">
+      
+                    <div class="abcone">
+                             <h3>{{lflt}}</h3>
+                             <span>{{lfst}}</span> 
+                            </div>
+
+                            <div class="abctwo">
+                              <h5>{{midt}}</h5>
+                              <span>
+                                  {{{midcl}}}
+                              </span>
+                            </div>
+
+                            <div class="abcthre">
+                            
+                              <div class="svim"><img src="{{rsvg}}"></div>
+                              
+                            
+                            </div>
+                      </div>
+                   
+                    
+                    
+                    {{/each}}
+
+                  {{/JSONparse}} 
+
             {{/if}}
         {{/with}}
-         test{{json this}}
     {{/each}}
+        
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="minfo">
+
+   <div class="accordion_container">
+    
+        <div class="accordion_head">More Information<span class="plusminus">+</span></div>
+       <div class="accordion_body" style="display: none;">
+       
+        {{#each gql.data.site.product.metafields.edges}}
+            {{#with node}}
+                {{#if key '==' 'minfo'}}
+                    {{{value}}}
+                {{/if}}
+            {{/with}}
+        {{/each}}
+     </div>
+   </div>
+ 
+</div>
+
+
+
+<div class="fqs">
+ <hr style="max-width: 100%; margin: 30px 0;">
+
+
+ <div class="faq">
+
+    
+    
+    <h2>Frequently Asked Questions</h2>
+    
+    
+    <div class="faqcon">
+     <div class="accordion_container">
+      
+       
+      {{#each gql.data.site.product.metafields.edges}}
+            {{#with node}}
+                {{#if key '==' 'pfaq'}}
+                   {{#JSONparse value}}
+                    
+                    {{#each this}}
+
+<div class="accordion_head ">{{{fques}}}<span class="plusminus">-</span></div>
+       <div class="accordion_body" style="">
+       <h5><strong>{{{fqans}}}</strong></h5>
+       </div>
+
+                    {{/each}}
+
+                  {{/JSONparse}} 
+                {{/if}}
+            {{/with}}
+        {{/each}}
+      
+       
+      
+      
+      
+         
+     </div>
     </div>
+    
+</div>
+</div>
+
+
+
 
     <div class="halo-productView-bottom">
         {{#if theme_settings.productpage_product_block-1 '==' 'Related'}}
@@ -123,7 +403,7 @@ gql: 'query productById($productId: Int!) {
 <script>
 
 
-
+function get_meta(sku){
     var xx='{{product.id}}';
     var query=`query MyFirstQuery {
         site {
@@ -161,10 +441,39 @@ gql: 'query productById($productId: Int!) {
   })
 
   .then(res => res.json())
-  .then(data => console.log(data)) // will log JSON result to browser console
+  .then(function(data){
+       data => data.json();
+       console.log(data.data.site.product.variants.edges)
+      var edg=data.data.site.product.variants.edges;
+
+$.each( edg, function( key, value ) {
+    //console.log(value)
+ if(value.node.sku==sku){
+   var  tt=this.node.metafields.edges[0].node.value;
+  
+  tt=$.parseJSON(tt);
+  var b1=tt.dbox1;
+
+  var b2=tt.dbox2;
+  var vrurl = tt.vrur;
+  var bubc=tt.bubc;
+
+  $(".pfcon .pdf .con").html(b1);
+  $(".pad .con").html(b2);
+$(".viewr").attr('href',vrurl);
+
+$(".pdf").css('background-color',bubc);
+$(".pad").css('background-color',bubc);
+$(".pbu").css('background-color',bubc);
+$(".hwtusecon").css('background-color',bubc);
+
+ }
+});
+
+  }) // will log JSON result to browser console
   .catch(error => console.error(error));
 
-
+}
 
 
 
@@ -178,7 +487,7 @@ var target = document.querySelector('.productView-info-value');
 // Create an observer instance.
 var observer = new MutationObserver(function(mutations) {
     var sku=target.innerText;
-
+    get_meta(sku);
     
 });
 
@@ -194,3 +503,328 @@ observer.observe(target, {
 
 
 </script>
+
+
+
+<style>
+
+.pfcon > div {
+    padding: 0px 30px;
+    color: white;
+    border-radius: 22px;
+    padding-bottom: 30px;
+}.pfcon {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}.pfcon h2 {
+    letter-spacing: unset;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+    border-bottom: 2px solid white;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: 600;
+    font-family: 'Roboto Condensed';
+    letter-spacing: 2px;
+    font-size: 22px;
+    line-height: 38px;
+}
+.con p {
+    font-weight: 600;
+    font-size: 14px;
+}
+.prod_des {
+    padding: 0 4%;
+}
+.ad1, .ad2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}.ad1 span, .ad2 span {
+    font-size: 18px;
+    font-weight: bold;
+    flex-basis: 20%;
+    text-align: center;
+}.con .dr {
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    flex-basis: 80%;
+}.anadoc a.viewr {
+    background: white;
+    color: #000;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 18px;
+    padding: 7px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 16px;
+}
+a.adl {
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.row.prod-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+}.prod-imgs .column {
+    flex: 1;
+    text-align: center;
+    max-width: 185px;
+}.prod-imgs img {
+    max-width: 160px;
+}
+.hwtusecon {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}.hwtuse {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-gap: 40px;
+    padding: 30px 0 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+        position: relative;
+    top: 0;
+    left: 50px;
+}
+.hwone h4 {
+    font-size: 42px;
+    line-height: 55px;
+    text-transform: unset;
+    letter-spacing: unset;
+    color: white;
+    font-weight: 600;
+}
+.steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}.steps  h2 {
+    font-size: 48px;
+    margin: 0;
+    border-bottom: 3px solid white;
+    color: white;
+    padding-bottom: 10px;
+    font-weight: 600;
+    line-height: 60px;
+}.st {
+    color: white;
+}.steps p {
+    line-height: 22px;
+    letter-spacing: unset;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    padding: 20px 0;
+}
+
+.p_banner {
+    margin: 20px 0;
+}
+.abcbitem {
+    display: grid;
+    grid-template-columns: 25% 40% 25%;
+    grid-gap: 5%;
+    margin: 20px 0;
+    padding: 20px 0;
+}.abcone {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}.abcone h3 {
+    font-size: 82px;
+    line-height: 85px;
+}.abcone span {
+    font-size: 26px;
+    line-height: 29px;
+}.abctwo h5 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}.abctwo span {
+    color: black;
+    text-align: center;
+}.abcthre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}.abctwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}.abcone h3 {
+    font-size: 82px;
+    line-height: 85px;
+    font-weight: 600;
+}.abctwo h5 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.minfo .accordion_container {
+    width: auto;
+    padding: 0px 0;
+    padding-top: 10px;
+    text-align: center;
+}.minfo .accordion_head {
+    background: transparent;
+    color: black;
+    font-size: 32px;
+    display: inline;
+}.accordion_body {
+    background: white;
+    padding: 0 35px;
+    color: black;
+    line-height: 22px;
+    padding-bottom: 20px;
+}.minfo .plusminus {
+    float: right;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+}.accordion_head {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-family: arial;
+    font-size: 18px;
+    margin: 0 0 8px 0;
+    padding: 15px 35px;
+    font-weight: normal;
+    width: 100%;
+    border-radius: 12px;
+    position: relative;
+}
+.accordion_head.active {
+    background-color: #0096cd;
+}.accordion_body {
+    background: white;
+    padding: 0 35px;
+    color: black;
+    line-height: 22px;
+    padding-bottom: 20px;
+    display:none;
+}.plusminus {
+    float: right;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}.faq {
+    margin: 0 2%;
+}.faq h2 {
+    text-align: center;
+    text-transform: unset;
+    letter-spacing: unset;
+    font-weight: bold;
+    margin-bottom: 30px;
+}.abcb {
+    margin: 0 2%;
+}.abcbitem:nth-child(2n) {
+    background: #ebebeb;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:768px){
+
+    .pfcon {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}.hwtuse {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    padding: 30px 0 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    left: unset;
+    margin: 0 auto;
+    padding: 0 30px;
+}.steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+}
+.abcbitem {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5%;
+    margin: 20px 0;
+    padding: 20px 0;
+}.halo-productView-right {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    margin-top: 0;
+    margin-right: 0;
+    padding: 0 0 0 30px;
+}.hwone h4 {
+    font-size: 25px;
+    line-height: 55px;
+    text-transform: unset;
+    letter-spacing: unset;
+    color: white;
+    font-weight: 600;
+}
+.desk_show{
+    display:none;
+}
+.mob_show{
+    display:block;
+}.prdefpe img {
+    max-width: 88px;
+}.halo-productView-right {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    margin-top: 0;
+    margin-right: 0;
+    padding: 0 0px;
+}label.form-option.form-option-rectangle span {
+    font-size: 12px !important;
+}
+}
+
+</style>
