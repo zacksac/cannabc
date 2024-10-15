@@ -2,10 +2,12 @@
   "customLayouts": {
     "brand": {},
     "category": {},
-    "page": {},
+    "page": {
+      "productdocumentation.html": "/product-documentation/"
+    },
     "product": {}
   },
-  "normalStoreUrl": "https://cannariver-sandbox.mybigcommerce.com",
+  "normalStoreUrl": "https://store-yqxykqy3k1.mybigcommerce.com",
   "port": 3000,
   "packageManager": "npm"
 }

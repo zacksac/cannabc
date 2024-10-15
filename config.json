@@ -1868,7 +1868,9 @@
         "afterpay-button-color": "black-mint",
         "amazon-button-color": "Gold",
         "masterpass-button-color": "black",
-        "paymentbuttons-provider-sorting": []
+        "paymentbuttons-provider-sorting": [
+          "paypal"
+        ]
       }
     },
     {

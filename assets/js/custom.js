@@ -1,7 +1,6 @@
 
 
 
- 
 
 
 
@@ -82,3 +81,57 @@ jQuery(".accordion_head").on("click", function() {
     jQuery(this).children(".plusminus").text("-"),
     jQuery(this).addClass("active"))
 })
+
+
+
+
+
+
+function get_coll(id){
+    var xx='{{product.id}}';
+    var query=`query MyFirstQuery {
+        site {
+          product(entityId:`+id+`){ 
+        
+      metafields(namespace: "ct_metafields", keys: ["colpg"]) {
+        edges {
+          node {
+            id
+            key
+            value
+          }
+        }
+      }
+      id
+    }
+  }
+      }`;
+    console.log(xx);
+      fetch('/graphql', {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer {{ settings.storefront_api.token }}' // use auto-generated token
+    },
+    body: JSON.stringify({
+      query: query
+    })
+  })
+
+  .then(res => res.json())
+  .then(function(data){
+       data => data.json();
+       console.log(data);
+       console.log(data.data.site.product.metafields.edges[0].node.value)
+      var edg=data.data.site.product.metafields.edges[0].node.value;
+       tt=$.parseJSON(edg);
+      var title=tt.bubt;
+      var tcolor=tt.bubfc;
+      var bcolor=tt.bubbg;
+ console.log(this);
+
+  }) // will log JSON result to browser console
+  .catch(error => console.error(error));
+
+}

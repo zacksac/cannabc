@@ -1,0 +1,667 @@
+
+{{#partial "page"}}
+<div class="anaban">
+         
+         <div class="anab1" style="background:#f1489b;">
+             <div class="anab1c">
+                 <h2>PRODUCT DOCUMENTATION
+</h2>
+             
+                <p>At Canna River, product safety is at the core of who we are. As a brand, we insist on going above and beyond in not only the frequency and manner in which we test our products, but also, the transparency we exhibit for our customers and wholesalers.</p>
+             </div>
+             
+         </div>
+         <div class="anab2">
+                       <img alt="" src="https://cdn.shopify.com/s/files/1/0029/5682/0569/t/29/assets/Layer-14-copy.jpg?v=1678467092">
+        
+        <div class="anbtitle">
+           VIEW &amp; DOWNLOAD REPORTS
+     </div>
+        
+        </div>
+        
+    </div>
+
+
+<div class="searchbar">
+        
+        <div class="sboxinfo">
+            
+            <h2>KNOW YOUR BATCH NUMBER?
+</h2>
+            <p>Enter your batch number into the search field and press “SEARCH”. This page only displays the most recent COA’s of our products. If your batch does not appear when searching, please contact us at info@cannariver.com and we will email you the COA you require.</p>
+        </div>
+        
+        
+       <div class="sbox">   
+        <input type="text" id="search"> <button id="ssearch" type="submit">Search</button> <button id="sclear">Clear</button>
+        </div>
+    </div>
+
+
+
+    <div class="main-header">
+   <div class="mhconcon">
+     <div class="mhcon Gummy">
+       <div class="ctitle">
+         <a href="#Gummy">Gummy</a>
+       </div>
+
+     
+        
+       <div class="mpcon">
+        
+         
+
+         </div>
+          
+        
+
+        
+        
+          
+        
+ 
+   
+       
+     </div>
+   </div>
+   <div class="mhconcon">
+     <div class="mhcon Tincture">
+       <div class="ctitle">
+         <a href="#Tincture">Tincture</a>
+       </div>
+
+         
+
+
+    <div class="mpcon">
+        
+         
+
+         </div>
+      
+    
+
+    
+    
+
+         
+     </div>
+   </div>
+   <div class="mhconcon">
+     <div class="mhcon Topical">
+       <div class="ctitle">
+         <a href="#Topical">Topical</a>
+       </div>
+
+     
+
+            
+           <div class="mpcon">
+        
+         
+
+         </div>
+            
+
+              
+            
+
+    
+
+           
+     </div>
+   </div>
+   <div class="mhconcon">
+     <div class="mhcon Vape">
+       <div class="ctitle">
+         <a href="#Vape">Vape</a>
+       </div>
+
+        
+
+
+          
+           <div class="mpcon">
+        
+         
+
+         </div>
+            
+          
+
+            
+          
+         
+     </div>
+   </div>
+ </div>
+
+
+
+<div class="mhconz">
+<div class="main-header2">
+  <div class="mhcon2">
+
+          
+  </div>
+</div>
+</div>
+
+
+<div class="searchcon" style="display: none;">
+  
+</div>
+
+{{/partial}}
+
+{{> layout/base}}
+
+
+
+
+<script>
+    function get_doc(sku){
+        var ctr=0;
+    var xx=sku;
+    console.log(sku);
+    var query=`query MyFirstQuery1 {
+        site {
+            category(entityId: `+xx+`) {
+              name
+              entityId
+              products(first: 50) {
+                pageInfo {
+                  hasNextPage
+                  startCursor
+                  endCursor
+                }
+                edges {
+                  node {
+                    name
+                    entityId
+                    sku
+                    variants(first: 10) {
+                      edges {
+                        node {
+                          id
+                          sku
+                          metafields(namespace: "ct_metafields", keys: ["prdoc"]) {
+                            edges {
+                              node {
+                                id
+                                key
+                                value
+                              }
+                            }
+                          }
+                          defaultImage {
+                            url(width: 120)
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+        }
+          
+      }`;
+    console.log(xx);
+      fetch('/graphql', {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer {{ settings.storefront_api.token }}' // use auto-generated token
+    },
+    body: JSON.stringify({
+      query: query
+    })
+  })
+
+  .then(res => res.json())
+  .then(function(data){
+       data => data.json();
+
+      
+      var edg=data.data.site.category;
+      var catname=edg.name;
+    
+      $(".mhcon2").append('<div class="ctitle2" id="'+catname+'" style="background:#26b526;color:#ffffff"> '+catname+' </div>');
+      console.log(ctr);
+  
+              var prds =edg.products.edges;
+            $.each( prds, function( key, value ) {
+                //console.log(value)
+              console.log("-----");
+               var  tt=value.node;
+               var product_id=value.node.entityId;
+               var product_name=value.node.name;
+                    var product_name_nosp=product_name.replace(/\s/g, '');
+               $("."+catname+" .mpcon").append('<div class="stitle"> <a href="#'+product_name_nosp+'">'+product_name+'</a> </div>');
+               
+               console.log(catname);
+
+              
+               $(".mhcon2").append('<div class="stitle2" id="'+product_name_nosp+'"> '+product_name+'</div>');
+
+               var varian=value.node.variants.edges;
+
+                            $.each( varian, function( key, value ) {
+                               
+                              var img= value.node.defaultImage.url;
+
+                              var temp=value.node.metafields.edges.length;
+                              
+                              if(temp > 0){
+                            
+                              var metafields=value.node.metafields.edges[0].node.value;
+                                var metafieldsjson=$.parseJSON(metafields);
+                                 console.log(metafieldsjson);
+                                 $.each( metafieldsjson, function( key, value ) {
+                                   var titl=value.titl;
+                                   var viewreport=value.viewrep;
+                                   var idnum=value.idnum;
+
+                                   console.log(titl);
+
+                                   var mtf= '<div class="datecon" style="display:block;"> <div class="ditem"> <div class="imdcon"> <img src="'+img+'"> </div> <div class="imddcon"> <div class="dcon" data-hash="'+idnum+'" data-title="'+titl+'"> <div class="dl"> <h4>'+titl+' </h4> <p>'+idnum+' </p> </div> <div class="dr"> <a target="_blank" class="viewr" href="'+viewreport+'" aria-describedby="a11y-new-window-external-message" rel="noopener">VIEW REPORT </a>  </div> </div> </div> </div> </div>  ';
+                                  
+                                  console.log(mtf);
+                                  $(".mhcon2").append(mtf);
+                                 })
+                          }
+
+
+                            })
+
+
+           
+
+             
+            });
+
+
+
+
+
+
+  }) 
+
+
+  
+
+
+  // will log JSON result to browser console
+  .catch(error => console.error(error));
+ctr++;
+
+}
+get_doc(28);
+
+get_doc(29);
+
+get_doc(27);
+get_doc(30);
+ 
+
+   $("#sclear").click(function(){
+$(".mhconz").show(500);
+    $(".searchcon").hide();
+    
+})
+$("#ssearch").click(function(){
+    
+var text=$("#search").val();
+console.log(text);
+text=text.replace('#', '');
+
+
+     $(".searchcon").html("");
+     $(".searchcon").show();
+console.log(text+"stext--");
+  var xp=  $(".main-header2").find("[data-hash='"+text+"']").each(function(da,xx){
+      
+      console.log(xx+'findtext--');
+      var t=$(this).attr("data-title");
+      $(".mhconz").hide();
+     
+      $(".searchcon").append(t);
+      $(this).clone().appendTo(".searchcon");
+  })
+   
+})
+
+
+</script>
+
+
+<style>
+	.anaban {
+    display: grid;
+    grid-template-columns: 44% 56%;
+    margin: 0 36px;
+}.anab1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+    background: #f1489b;
+    color: white;
+}.anab1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+    background: #f1489b;
+    color: white;
+}div {
+    font-family: "Roboto Condensed" !important;
+}.anab1c h2 {
+    color: white;
+    letter-spacing: unset;
+    margin: 0;
+    font-size: 42px;
+    line-height: 50px;
+}.anab2 {
+    position: relative;
+}.anbtitle {
+    position: absolute;
+    color: white;
+    bottom: 40px;
+    left: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+}.searchbar {
+    margin-top: 40px;
+}.sboxinfo {
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 20px;
+}.sboxinfo h2 {
+    font-size: 42px;
+    letter-spacing: 0px;
+    margin: 0;
+}
+
+.searchcon {
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.sboxinfo p {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #878787;
+
+    margin:0;
+}.sbox {
+    margin-top: 20px !important;
+    max-width: 1316px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}.sbox input#search {
+    margin: 0;
+    padding: 13px 12px;
+    border: 1px solid;
+    border-radius: 10px 0 0 10px;
+}button#sclear {
+    background: black;
+    color: white;
+    padding: 10px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 12px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}.main-header {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    max-width: 1348px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}.mhconcon {
+    background: #f0f0f0;
+    border-radius: 20px;
+}.mhcon {
+    padding: 20px 110px;
+    border-radius: 14px;
+    padding-left: 20px;
+}.ctitle {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 47px;
+}
+.main-header2 {
+    max-width: 1300px;
+    margin: 0 auto;
+}.ctitle2 {
+    padding: 12px 20px;
+    border-radius: 18px;
+}.stitle2 {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    margin: 20px 0;
+    padding: 12px 20px;
+    border-radius: 18px;
+    background: #f0f0f0;
+}.datecon {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin: 50px 0;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}.ditem {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}.imdcon {
+    text-align: center;
+}.imdcon img {
+    max-width: 150px;
+    margin: 0 auto;
+    border: 1px solid #878787;
+    padding: 12px 10px;
+    border-radius: 22px;
+}.dcon {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}.dl {
+    border: 1px solid #878787;
+    border-radius: 22px;
+    padding: 30px;
+    margin-bottom: 20px;
+}.dl h4 {
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: unset;
+}.dl p {
+    margin: 0;
+    padding: 0;
+}.dr {
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}a.viewr {
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 18px;
+}
+main#main-content {
+    margin: 0;
+}.sboxinfo h2 {
+    font-size: 42px;
+    letter-spacing: 0px;
+    margin: 0;
+    font-family: roboto condensed;
+    font-weight: 600;
+}
+.sbox .qodef-theme-button, .sbox button[type=submit], .sbox input[type=submit] {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    margin: 0;
+    font-family: "Roboto Condensed",sans-serif;
+    font-size: 18px;
+    line-height: 2em;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0;
+    outline: 0;
+    transition: color .2s ease-out,background-color .2s ease-out,border-color .2s ease-out;
+    padding: 5px;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #000;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+}.sbox input#search {
+    margin: 0;
+    padding: 13px 12px;
+    border: 1px solid;
+    border-radius: 10px 0 0 10px;
+}.ctitle2 {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    margin: 20px 0;
+}a.viewr {
+    background: #0085F9;
+    text-align: center;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+.dl h4 {
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: unset;
+    font-size: 16px;
+}
+
+
+
+@media(max-width:1400px){
+
+    .anab1c h2 {
+    color: white;
+    letter-spacing: unset;
+    margin: 0;
+    font-size: 28px;
+    line-height: 50px;
+}
+.sboxinfo h2 {
+    font-size: 34px;
+    letter-spacing: 0px;
+    margin: 0;
+    font-family: roboto condensed;
+    font-weight: 600;
+}
+main#main-content {
+    padding: 0 20px;
+}.anaban {
+    display: grid;
+    grid-template-columns: 44% 56%;
+    margin: 0 16px;
+}
+}
+
+
+@media(max-width:768px){
+
+
+    .anaban {
+    display: grid;
+    grid-template-columns: 1fr;
+}.searchbar {
+    margin-top: 40px;
+    padding: 0 20px;
+}.sbox {
+    margin-top: 20px !important;
+    max-width: 1316px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    justify-content: center;
+    align-items: center;
+}.main-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    position: relative;
+    margin: 40px 5px;
+}.ditem {
+    display: grid;
+    grid-template-columns: 1fr;
+}.dcon {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}.dl {
+    border: 1px solid;
+    border-radius: 22px;
+    padding: 15px;
+    margin-bottom: 20px;
+}a.viewr {
+    font-size: 24px;
+}.imdcon img {
+    max-width: 150px;
+    margin: 0 auto;
+    border: 1px solid #878787;
+    padding: 12px 10px;
+    border-radius: 22px;
+}.sboxinfo {
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+}
+.anaban {
+    display: grid;
+    grid-template-columns: 44% 56%;
+    margin: 0;
+}.homelinks {
+    margin: 0 8px;
+}.imdcon img {
+    max-width: 90%;
+    margin: 0 auto;
+    border: 1px solid #878787;
+    padding: 12px 10px;
+    border-radius: 22px;
+    width: 90%;
+    margin-bottom: 20px;
+}
+}
+</style>
