@@ -1,0 +1,80 @@
+{{#partial "page"}}
+
+test
+{{/partial}}
+
+{{> layout/base}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    function get_doc(){
+        var ctr=0;
+   console.log("faq")
+    var query=`query MyQuery {
+  channel {
+    metafields(namespace: "ct_metafields", keys: ["fqpin"]) {
+      edges {
+        node {
+          key
+          value
+        }
+      }
+    }
+  }
+}`;
+   
+      fetch('/graphql', {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer {{ settings.storefront_api.token }}' // use auto-generated token
+    },
+    body: JSON.stringify({
+      query: query
+    })
+  })
+
+  .then(res => res.json())
+  .then(function(data){
+       data => data.json();
+
+      console.log(data);
+    
+
+
+
+
+
+
+  }) 
+
+
+  
+
+
+  // will log JSON result to browser console
+  .catch(error => console.error(error));
+ctr++;
+
+}
+get_doc();
+
+
+ 
+
+
+
+
+</script>

@@ -55,7 +55,7 @@
         {{~inject 'token' settings.storefront_api.token}}
         {{~inject 'money' settings.money}}
     </head>
-    <body class="page-type-{{page_type}}{{#if customer}} is-login{{/if}}{{#if theme_settings.halo_homepage_layout_2}} home-layout-2{{else if theme_settings.halo_homepage_layout_3}} home-layout-3{{else if theme_settings.halo_homepage_layout_4}} home-layout-4{{/if}}" data-page-type="{{page_type}}" canonical-shop-url="{{settings.secure_base_url}}">
+    <body  class="pgid-{{page.id}} page-type-{{page_type}}{{#if customer}} is-login{{/if}}{{#if theme_settings.halo_homepage_layout_2}} home-layout-2{{else if theme_settings.halo_homepage_layout_3}} home-layout-3{{else if theme_settings.halo_homepage_layout_4}} home-layout-4{{/if}}" data-page-type="{{page_type}}" canonical-shop-url="{{settings.secure_base_url}}">
         <svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
 
         {{> components/common/header }}

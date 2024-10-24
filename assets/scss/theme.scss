@@ -154,6 +154,10 @@ main#main-content {
     margin-bottom: 0;
 }
 
+
+
+
+
 .sec3 {
     position: relative;
     margin-top: 20px;
@@ -660,6 +664,17 @@ figure.productView-image {
 
 
 @media(max-width:768px){
+
+
+.catimd{
+    
+    display:none;
+}
+
+.catimm{
+    display:block !important;
+}
+
 .deskshow {
     display: none;
 }
