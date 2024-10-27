@@ -3,7 +3,8 @@
     "brand": {},
     "category": {},
     "page": {
-      "productdocumentation.html": "/product-documentation/"
+      "productdocumentation.html": "/product-documentation/",
+      "faq.html":"/faq/"
     },
     "product": {}
   },

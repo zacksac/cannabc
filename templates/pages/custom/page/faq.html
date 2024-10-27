@@ -1,6 +1,112 @@
 {{#partial "page"}}
 
-test
+<div class="faq">
+
+    
+    
+    <h2>Frequently Asked Questions</h2>
+    
+    
+    <div class="faqcon">
+     <div class="accordion_container">
+      
+       
+      
+         
+     </div>
+    </div>
+    
+</div>
+
+<div class="faqsli">
+
+    <div class="fmenu">
+
+        <p data-id="1" class="active">PRODUCT INFO</p>
+        <p data-id="2" class="">SHIPPING</p>
+        <p data-id="3">ABOUT CANNA RIVER </p>
+        <p data-id="4">STORE POLICIES </p>
+    </div>
+
+    <div class="faqmain">
+
+        <div class="faq1 fq">
+
+            <div class="faqcon">
+                <div class="accordion_container">
+
+
+
+
+                    
+
+
+                   
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="faq2 fq" style="display:none;">
+
+            <div class="faqcon">
+                <div class="accordion_container">
+
+
+
+
+                   
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="faq3 fq" style="display:none;">
+
+            <div class="faqcon">
+                <div class="accordion_container">
+
+
+
+
+                   
+
+
+                   
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="faq4 fq" style="display:none;">
+
+            <div class="faqcon">
+                <div class="accordion_container">
+
+
+
+
+                    
+
+
+                   
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
 {{/partial}}
 
 {{> layout/base}}
@@ -23,7 +129,7 @@ test
    console.log("faq")
     var query=`query MyQuery {
   channel {
-    metafields(namespace: "ct_metafields", keys: ["fqpin"]) {
+    metafields(namespace: "ct_metafields", keys: ["fqpin","fqship","fqabt","fqst"]) {
       edges {
         node {
           key
@@ -50,9 +156,50 @@ test
   .then(function(data){
        data => data.json();
 
-      console.log(data);
+      var dta=data.data.channel.metafields.edges;
     
+        $.each( dta, function( key, value ) {
+          
+            if(value.node.key=="fqpin"){
+ console.log(value.node.value)
+  var metafieldsjson=$.parseJSON(value.node.value);
+   $.each( metafieldsjson, function( key, value ) {
+    var qs=value.fques;
+    var as=value.fans;
+    var strc=' <div class="accordion_head"> '+qs+' <span class="plusminus">+</span></div> <div class="accordion_body" style="display: none;"> '+as+'</div>';
+    $(".faq1 .accordion_container").append(strc);
+   })
+            }
+            else if(value.node.key=="fqship"){
+              var metafieldsjson=$.parseJSON(value.node.value);
+   $.each( metafieldsjson, function( key, value ) {
+    var qs=value.fques;
+    var as=value.fans;
+    var strc=' <div class="accordion_head"> '+qs+' <span class="plusminus">+</span></div> <div class="accordion_body" style="display: none;"> '+as+'</div>';
+    $(".faq2 .accordion_container").append(strc);
+   })
 
+            }
+             else if(value.node.key=="fqabt"){
+              var metafieldsjson=$.parseJSON(value.node.value);
+   $.each( metafieldsjson, function( key, value ) {
+    var qs=value.fques;
+    var as=value.fans;
+    var strc=' <div class="accordion_head"> '+qs+' <span class="plusminus">+</span></div> <div class="accordion_body" style="display: none;"> '+as+'</div>';
+    $(".faq3 .accordion_container").append(strc);
+   })
+              
+            }
+             else if(value.node.key=="fqst"){
+              var metafieldsjson=$.parseJSON(value.node.value);
+   $.each( metafieldsjson, function( key, value ) {
+    var qs=value.fques;
+    var as=value.fans;
+    var strc=' <div class="accordion_head"> '+qs+' <span class="plusminus">+</span></div> <div class="accordion_body" style="display: none;"> '+as+'</div>';
+    $(".faq4 .accordion_container").append(strc);
+   })
+            }
+        })
 
 
 
@@ -73,8 +220,115 @@ get_doc();
 
 
  
+ $(".fmenu p").click(function(){
 
+    $(".fmenu p").removeClass("active");
+    $(this).addClass("active");
+    var id=$(this).attr("data-id");
+    console.log(id);
+    $(".fq").hide();
+    $(".faq"+id).fadeIn(500);
+})
 
 
 
 </script>
+
+
+
+<style>
+.faq h2 {
+    text-align: center;
+    text-transform: unset;
+    letter-spacing: unset;
+    font-weight: bold;
+}.faq {
+    padding: 20px 0;
+}.shopify-section {
+    margin: 0 2%;
+}
+
+.accordion_head.active {
+    background-color: #0096cd;
+}
+
+.faqsli {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}.fmenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}.fmenu p.active {
+    color: black;
+    position: relative;
+}.fmenu p {
+    font-size: 25px;
+    padding: 0 25px;
+    font-weight: bold;
+    color: #b3b3b3;
+    cursor: pointer;
+}.accordion_container {
+    width: auto;
+    padding: 0px 0;
+    padding-top: 10px;
+}.accordion_head {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-family: arial;
+    font-size: 18px;
+    margin: 0 0 8px 0;
+    padding: 15px 35px;
+    font-weight: normal;
+    width: 100%;
+    border-radius: 12px;
+    position: relative;
+}.accordion_body {
+    background: white;
+    padding: 0 35px;
+    color: black;
+    line-height: 22px;
+    padding-bottom: 20px;
+}.accordion_body p {
+    padding: 18px 5px;
+    margin: 0px;
+}.plusminus {
+    float: right;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+
+@media(max-width:768px){
+
+  .fmenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    overflow: scroll;
+    justify-content: flex-start;
+}.fmenu p {
+    font-size: 18px;
+    padding: 0 25px;
+    font-weight: 700;
+    color: #b3b3b3;
+    cursor: pointer;
+    line-height: 16px;
+    width: 74%;
+    min-width: 50%;
+    text-align: center;
+}
+.faqsli {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding: 0 20px;
+}
+}
+
+</style>
