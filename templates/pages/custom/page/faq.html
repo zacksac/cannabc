@@ -165,7 +165,7 @@
   var metafieldsjson=$.parseJSON(value.node.value);
    $.each( metafieldsjson, function( key, value ) {
     var qs=value.fques;
-    var as=value.fans;
+    var as=value.fqans;
     var strc=' <div class="accordion_head"> '+qs+' <span class="plusminus">+</span></div> <div class="accordion_body" style="display: none;"> '+as+'</div>';
     $(".faq1 .accordion_container").append(strc);
    })
@@ -229,6 +229,10 @@ get_doc();
     $(".fq").hide();
     $(".faq"+id).fadeIn(500);
 })
+
+
+
+
 
 
 

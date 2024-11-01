@@ -4,7 +4,9 @@
     "category": {},
     "page": {
       "productdocumentation.html": "/product-documentation/",
-      "faq.html":"/faq/"
+      "faq.html":"/faq/",
+      "discount.html":"/discount/",
+      "subscriptions.html":"/subscriptions/"
     },
     "product": {}
   },

@@ -1,6 +1,6 @@
 {
   "regions": {
-    "pages/blog-post": [
+    "pages/blog": [
       {
         "name": "header_bottom--global"
       },
@@ -17,7 +17,7 @@
         "name": "ssl_site_seal--global"
       }
     ],
-    "pages/blog": [
+    "pages/blog-post": [
       {
         "name": "header_bottom--global"
       },
@@ -69,6 +69,29 @@
         "name": "ssl_site_seal--global"
       }
     ],
+    "pages/brands": [
+      {
+        "name": "header_bottom--global"
+      },
+      {
+        "name": "header_bottom"
+      },
+      {
+        "name": "brands_below_header"
+      },
+      {
+        "name": "brands_below_content"
+      },
+      {
+        "name": "home_policy_block--global"
+      },
+      {
+        "name": "home_policy_block"
+      },
+      {
+        "name": "ssl_site_seal--global"
+      }
+    ],
     "pages/cart": [
       {
         "name": "header_bottom--global"
@@ -106,6 +129,9 @@
         "name": "header_bottom"
       },
       {
+        "name": "home_below_menu--global"
+      },
+      {
         "name": "category_below_header"
       },
       {
@@ -134,26 +160,6 @@
       }
     ],
     "pages/checkout": [],
-    "pages/contact-us": [
-      {
-        "name": "header_bottom--global"
-      },
-      {
-        "name": "header_bottom"
-      },
-      {
-        "name": "halo_contact_info"
-      },
-      {
-        "name": "home_policy_block--global"
-      },
-      {
-        "name": "home_policy_block"
-      },
-      {
-        "name": "ssl_site_seal--global"
-      }
-    ],
     "pages/compare": [
       {
         "name": "header_bottom--global"
@@ -174,7 +180,7 @@
         "name": "ssl_site_seal--global"
       }
     ],
-    "pages/brands": [
+    "pages/contact-us": [
       {
         "name": "header_bottom--global"
       },
@@ -182,10 +188,7 @@
         "name": "header_bottom"
       },
       {
-        "name": "brands_below_header"
-      },
-      {
-        "name": "brands_below_content"
+        "name": "halo_contact_info"
       },
       {
         "name": "home_policy_block--global"
@@ -205,7 +208,7 @@
         "name": "header_bottom"
       },
       {
-        "name": "home_below_menu"
+        "name": "home_below_menu--global"
       },
       {
         "name": "home_service_1"
@@ -313,7 +316,6 @@
         "name": "ssl_site_seal--global"
       }
     ],
-    "pages/order-confirmation": [],
     "pages/page": [
       {
         "name": "header_bottom--global"
@@ -334,6 +336,7 @@
         "name": "ssl_site_seal--global"
       }
     ],
+    "pages/order-confirmation": [],
     "pages/product": [
       {
         "name": "header_bottom--global"
@@ -355,35 +358,6 @@
       },
       {
         "name": "category_below_content"
-      },
-      {
-        "name": "home_policy_block--global"
-      },
-      {
-        "name": "home_policy_block"
-      },
-      {
-        "name": "ssl_site_seal--global"
-      }
-    ],
-    "pages/search": [
-      {
-        "name": "header_bottom--global"
-      },
-      {
-        "name": "header_bottom"
-      },
-      {
-        "name": "search_below_header"
-      },
-      {
-        "name": "home_banner_search"
-      },
-      {
-        "name": "home_search_text"
-      },
-      {
-        "name": "search_below_content"
       },
       {
         "name": "home_policy_block--global"
@@ -418,6 +392,35 @@
       },
       {
         "name": "header_bottom"
+      },
+      {
+        "name": "home_policy_block--global"
+      },
+      {
+        "name": "home_policy_block"
+      },
+      {
+        "name": "ssl_site_seal--global"
+      }
+    ],
+    "pages/search": [
+      {
+        "name": "header_bottom--global"
+      },
+      {
+        "name": "header_bottom"
+      },
+      {
+        "name": "search_below_header"
+      },
+      {
+        "name": "home_banner_search"
+      },
+      {
+        "name": "home_search_text"
+      },
+      {
+        "name": "search_below_content"
       },
       {
         "name": "home_policy_block--global"
@@ -531,75 +534,6 @@
         "name": "ssl_site_seal--global"
       }
     ],
-    "pages/gift-certificate/balance": [
-      {
-        "name": "header_bottom--global"
-      },
-      {
-        "name": "header_bottom"
-      },
-      {
-        "name": "home_policy_block--global"
-      },
-      {
-        "name": "home_policy_block"
-      },
-      {
-        "name": "ssl_site_seal--global"
-      }
-    ],
-    "pages/gift-certificate/purchase": [
-      {
-        "name": "header_bottom--global"
-      },
-      {
-        "name": "header_bottom"
-      },
-      {
-        "name": "home_policy_block--global"
-      },
-      {
-        "name": "home_policy_block"
-      },
-      {
-        "name": "ssl_site_seal--global"
-      }
-    ],
-    "pages/gift-certificate/redeem": [
-      {
-        "name": "header_bottom--global"
-      },
-      {
-        "name": "header_bottom"
-      },
-      {
-        "name": "home_policy_block--global"
-      },
-      {
-        "name": "home_policy_block"
-      },
-      {
-        "name": "ssl_site_seal--global"
-      }
-    ],
-    "pages/unavailable/hibernation": [
-      {
-        "name": "header_bottom--global"
-      },
-      {
-        "name": "header_bottom"
-      },
-      {
-        "name": "home_policy_block--global"
-      },
-      {
-        "name": "home_policy_block"
-      },
-      {
-        "name": "ssl_site_seal--global"
-      }
-    ],
-    "pages/unavailable/maintenance": [],
     "pages/errors/403": [
       {
         "name": "header_bottom--global"
@@ -651,6 +585,75 @@
         "name": "ssl_site_seal--global"
       }
     ],
+    "pages/gift-certificate/purchase": [
+      {
+        "name": "header_bottom--global"
+      },
+      {
+        "name": "header_bottom"
+      },
+      {
+        "name": "home_policy_block--global"
+      },
+      {
+        "name": "home_policy_block"
+      },
+      {
+        "name": "ssl_site_seal--global"
+      }
+    ],
+    "pages/gift-certificate/redeem": [
+      {
+        "name": "header_bottom--global"
+      },
+      {
+        "name": "header_bottom"
+      },
+      {
+        "name": "home_policy_block--global"
+      },
+      {
+        "name": "home_policy_block"
+      },
+      {
+        "name": "ssl_site_seal--global"
+      }
+    ],
+    "pages/gift-certificate/balance": [
+      {
+        "name": "header_bottom--global"
+      },
+      {
+        "name": "header_bottom"
+      },
+      {
+        "name": "home_policy_block--global"
+      },
+      {
+        "name": "home_policy_block"
+      },
+      {
+        "name": "ssl_site_seal--global"
+      }
+    ],
+    "pages/unavailable/hibernation": [
+      {
+        "name": "header_bottom--global"
+      },
+      {
+        "name": "header_bottom"
+      },
+      {
+        "name": "home_policy_block--global"
+      },
+      {
+        "name": "home_policy_block"
+      },
+      {
+        "name": "ssl_site_seal--global"
+      }
+    ],
+    "pages/unavailable/maintenance": [],
     "pages/account/add-address": [
       {
         "name": "header_bottom--global"
@@ -702,7 +705,7 @@
         "name": "ssl_site_seal--global"
       }
     ],
-    "pages/account/add-wishlist": [
+    "pages/account/download-item": [
       {
         "name": "header_bottom--global"
       },
@@ -736,7 +739,7 @@
         "name": "ssl_site_seal--global"
       }
     ],
-    "pages/account/download-item": [
+    "pages/account/add-wishlist": [
       {
         "name": "header_bottom--global"
       },
@@ -821,24 +824,7 @@
         "name": "ssl_site_seal--global"
       }
     ],
-    "pages/account/recent-items": [
-      {
-        "name": "header_bottom--global"
-      },
-      {
-        "name": "header_bottom"
-      },
-      {
-        "name": "home_policy_block--global"
-      },
-      {
-        "name": "home_policy_block"
-      },
-      {
-        "name": "ssl_site_seal--global"
-      }
-    ],
-    "pages/account/return-saved": [
+    "pages/account/wishlist-details": [
       {
         "name": "header_bottom--global"
       },
@@ -872,7 +858,24 @@
         "name": "ssl_site_seal--global"
       }
     ],
-    "pages/account/wishlist-details": [
+    "pages/account/recent-items": [
+      {
+        "name": "header_bottom--global"
+      },
+      {
+        "name": "header_bottom"
+      },
+      {
+        "name": "home_policy_block--global"
+      },
+      {
+        "name": "home_policy_block"
+      },
+      {
+        "name": "ssl_site_seal--global"
+      }
+    ],
+    "pages/account/return-saved": [
       {
         "name": "header_bottom--global"
       },
@@ -967,6 +970,23 @@
       },
       {
         "name": "page_builder_content"
+      },
+      {
+        "name": "home_policy_block--global"
+      },
+      {
+        "name": "home_policy_block"
+      },
+      {
+        "name": "ssl_site_seal--global"
+      }
+    ],
+    "pages/custom/page/faq": [
+      {
+        "name": "header_bottom--global"
+      },
+      {
+        "name": "header_bottom"
       },
       {
         "name": "home_policy_block--global"
@@ -1085,82 +1105,46 @@
       {
         "name": "ssl_site_seal--global"
       }
+    ],
+    "pages/custom/page/productdocumentation": [
+      {
+        "name": "header_bottom--global"
+      },
+      {
+        "name": "header_bottom"
+      },
+      {
+        "name": "home_policy_block--global"
+      },
+      {
+        "name": "home_policy_block"
+      },
+      {
+        "name": "ssl_site_seal--global"
+      }
     ]
   },
   "templates": [
-    "layout/base",
     "layout/empty",
-    "pages/blog-post",
-    "pages/blog",
-    "pages/brand",
-    "pages/cart",
-    "pages/category",
-    "pages/checkout",
-    "pages/contact-us",
-    "pages/compare",
-    "pages/brands",
-    "pages/home",
-    "pages/order-confirmation",
-    "pages/page",
-    "pages/product",
-    "pages/search",
-    "pages/sitemap",
-    "pages/subscribed",
-    "pages/unsubscribe",
-    "pages/auth/account-created",
-    "pages/auth/create-account",
-    "pages/auth/forgot-password",
-    "pages/auth/login",
-    "pages/auth/new-password",
-    "pages/gift-certificate/balance",
-    "pages/gift-certificate/purchase",
-    "pages/gift-certificate/redeem",
-    "pages/unavailable/hibernation",
-    "pages/unavailable/maintenance",
-    "pages/errors/403",
-    "pages/errors/404",
-    "pages/errors/generic",
-    "pages/account/add-address",
-    "pages/account/add-payment-method",
-    "pages/account/add-return",
-    "pages/account/add-wishlist",
-    "pages/account/addresses",
-    "pages/account/download-item",
-    "pages/account/edit-payment-method",
-    "pages/account/edit",
-    "pages/account/inbox",
-    "pages/account/payment-methods",
-    "pages/account/recent-items",
-    "pages/account/return-saved",
-    "pages/account/returns",
-    "pages/account/wishlist-details",
-    "pages/account/wishlists",
-    "pages/account/orders/all",
-    "pages/account/orders/completed",
-    "pages/account/orders/details",
-    "pages/account/orders/invoice",
-    "pages/custom/page/faq-layout",
-    "pages/custom/page/home-landing-page",
-    "pages/custom/page/location-layout",
-    "pages/custom/page/lookbook-layout",
+    "layout/base",
     "components/carousel-content-announcement",
     "components/carousel-content",
     "components/carousel-play-pause-button",
     "components/carousel",
-    "components/blog/post",
-    "components/blog/sidebar",
     "components/account/add-wishlist",
-    "components/account/edit-account",
     "components/account/address-list",
-    "components/account/messages-form",
+    "components/account/edit-account",
     "components/account/messages-list",
     "components/account/navigation",
+    "components/account/messages-form",
     "components/account/order-contents",
     "components/account/orders-list",
     "components/account/payment-methods-list",
-    "components/account/wishlist-item-list",
     "components/account/returns-list",
+    "components/account/wishlist-item-list",
     "components/account/wishlist-list",
+    "components/blog/post",
+    "components/blog/sidebar",
     "components/brand/halo-product-listing",
     "components/brand/product-listing",
     "components/brand/show-more",
@@ -1169,37 +1153,37 @@
     "components/category/product-listing",
     "components/category/shop-by-price",
     "components/category/show-more",
-    "components/category/sort-box",
     "components/category/sidebar",
-    "components/gift-certificate/navigation",
+    "components/category/sort-box",
     "components/page/contact-us-form",
     "components/page/rss_feed",
-    "components/sitemap/links",
+    "components/gift-certificate/navigation",
     "components/social/connect",
     "components/social/instagram",
     "components/social/twitter",
     "components/search/advanced-search",
-    "components/search/content-listing",
     "components/search/content-count",
     "components/search/content-sort-box",
+    "components/search/content-listing",
     "components/search/halo-menu-tab",
-    "components/search/heading",
     "components/search/halo-product-listing",
+    "components/search/heading",
     "components/search/product-count",
-    "components/search/product-listing",
     "components/search/quick-results",
+    "components/search/product-listing",
     "components/search/show-more",
     "components/search/sidebar",
-    "components/cart/coupon-input",
-    "components/cart/content",
+    "components/sitemap/links",
     "components/cart/additional-checkout-buttons",
-    "components/cart/gift-certificate-input",
+    "components/cart/content",
     "components/cart/item-giftwrap",
+    "components/cart/gift-certificate-input",
+    "components/cart/coupon-input",
     "components/cart/item-options",
     "components/cart/page-title",
     "components/cart/preview",
-    "components/cart/shipping-estimator",
     "components/cart/shipping-quotes",
+    "components/cart/shipping-estimator",
     "components/cart/status-messages",
     "components/cart/totals",
     "components/cart/modals/configure-product-2",
@@ -1207,8 +1191,8 @@
     "components/cart/modals/configure-product",
     "components/cart/modals/gift-wrapping-form",
     "components/faceted-search/faceted-search-navigation",
-    "components/faceted-search/index",
     "components/faceted-search/range-form",
+    "components/faceted-search/index",
     "components/faceted-search/selected-facets",
     "components/faceted-search/show-more-facets",
     "components/faceted-search/facets/hierarchy-children",
@@ -1216,69 +1200,168 @@
     "components/faceted-search/facets/multi",
     "components/faceted-search/facets/range",
     "components/faceted-search/facets/rating",
-    "components/common/body",
     "components/common/breadcrumbs",
-    "components/common/cart-preview",
     "components/common/currency-selector",
+    "components/common/cart-preview",
+    "components/common/body",
     "components/common/footer",
     "components/common/header",
     "components/common/login-for-pricing",
     "components/common/navigation-2",
     "components/common/navigation-dropdown",
+    "components/common/navigation-list",
     "components/common/navigation-list-alternate",
     "components/common/navigation-menu",
-    "components/common/navigation-list",
     "components/common/navigation-mobile",
     "components/common/navigation",
-    "components/common/payment-icons",
-    "components/common/polyfill-script",
     "components/common/paginator",
-    "components/common/requireness-msg",
-    "components/common/search-box",
+    "components/common/polyfill-script",
+    "components/common/payment-icons",
     "components/common/quick-search",
-    "components/common/responsive-img",
+    "components/common/requireness-msg",
     "components/common/share",
-    "components/common/store-logo",
-    "components/common/social-links",
+    "components/common/search-box",
     "components/common/small-paginator",
+    "components/common/responsive-img",
+    "components/common/social-links",
+    "components/common/store-logo",
+    "components/common/subscription-form",
     "components/common/wallet-buttons",
     "components/common/wishlist-dropdown",
-    "components/common/subscription-form",
     "components/common/alert/alert-error",
-    "components/common/alert/alert-generic",
     "components/common/alert/alert-info",
+    "components/common/alert/alert-generic",
     "components/common/alert/alert-modal",
     "components/common/alert/alert-success",
     "components/common/modal/modal-close-btn",
     "components/common/modal/modal",
     "components/common/forms/checkbox",
-    "components/common/forms/date",
-    "components/common/forms/multiline",
     "components/common/forms/number",
+    "components/common/forms/multiline",
+    "components/common/forms/date",
     "components/common/forms/password",
     "components/common/forms/radio",
     "components/common/forms/select",
     "components/common/forms/selectortext",
     "components/common/forms/text",
+    "components/halothemes/brand/halo-all-brands",
+    "components/halothemes/brand/halo-azbrand",
+    "components/halothemes/ask-an-expert/halo-ask-an-expert",
+    "components/halothemes/ask-an-expert/halo-ask-an-expert-form",
+    "components/halothemes/category/halo-subcategories",
+    "components/halothemes/cart/halo-cart-secure-image",
+    "components/halothemes/configure-options/date",
+    "components/halothemes/configure-options/input-checkbox",
+    "components/halothemes/configure-options/input-file",
+    "components/halothemes/configure-options/input-numbers",
+    "components/halothemes/configure-options/input-text",
+    "components/halothemes/configure-options/product-list",
+    "components/halothemes/configure-options/set-radio",
+    "components/halothemes/configure-options/set-rectangle",
+    "components/halothemes/configure-options/set-select",
+    "components/halothemes/configure-options/swatch",
+    "components/halothemes/configure-options/textarea",
+    "components/halothemes/fbt-options/date",
+    "components/halothemes/fbt-options/input-checkbox",
+    "components/halothemes/fbt-options/input-file",
+    "components/halothemes/fbt-options/input-numbers",
+    "components/halothemes/fbt-options/input-text",
+    "components/halothemes/fbt-options/set-rectangle",
+    "components/halothemes/fbt-options/product-list",
+    "components/halothemes/fbt-options/set-radio",
+    "components/halothemes/fbt-options/set-select",
+    "components/halothemes/fbt-options/swatch",
+    "components/halothemes/fbt-options/textarea",
+    "components/halothemes/global/halo-before-you-leave",
+    "components/halothemes/global/halo-global",
+    "components/halothemes/global/halo-newsletter-popup",
+    "components/halothemes/global/halo-recently-viewed-products",
+    "components/halothemes/gallery/halo-product-paginator",
+    "components/halothemes/gallery/halo-show-products",
+    "components/halothemes/gallery/halo-toolbar",
+    "components/halothemes/gallery/halo-view-as-2",
+    "components/halothemes/gallery/halo-view-as",
+    "components/halothemes/header/halo-megamenu-theme-file",
+    "components/halothemes/header/halo-megamenu",
+    "components/halothemes/home/home-recent-posts",
+    "components/halothemes/home/home-subscription-form",
+    "components/halothemes/lookbook/halo-home-lookbook-tmp",
+    "components/halothemes/lookbook/halo-lookbook-tmp",
+    "components/halothemes/map/halo-google-map",
+    "components/halothemes/options-sticky-cart/input-checkbox",
+    "components/halothemes/options-sticky-cart/input-file",
+    "components/halothemes/options-sticky-cart/date",
+    "components/halothemes/options-sticky-cart/input-numbers",
+    "components/halothemes/options-sticky-cart/input-text",
+    "components/halothemes/options-sticky-cart/product-list",
+    "components/halothemes/options-sticky-cart/set-rectangle",
+    "components/halothemes/options-sticky-cart/set-radio",
+    "components/halothemes/options-sticky-cart/swatch",
+    "components/halothemes/options-sticky-cart/set-select",
+    "components/halothemes/options-sticky-cart/textarea",
+    "components/halothemes/page/halo-page-template",
+    "components/halothemes/product/halo-add-option-for-product-card",
+    "components/halothemes/product/halo-add-option-for-product-swatch",
+    "components/halothemes/product/halo-bundle-products-tmp",
+    "components/halothemes/product/halo-bundle-products-options",
+    "components/halothemes/product/halo-before-you-leave-temp",
+    "components/halothemes/product/halo-bundle-products",
+    "components/halothemes/product/halo-compare-colors",
+    "components/halothemes/product/halo-next-products-tmp",
+    "components/halothemes/product/halo-next-products",
+    "components/halothemes/product/halo-notify-me-out-of-stock",
+    "components/halothemes/product/halo-product-countdown",
+    "components/halothemes/product/halo-product-ask-an-expert",
+    "components/halothemes/product/halo-product-recommended-block",
+    "components/halothemes/product/halo-product-security-image",
+    "components/halothemes/product/halo-product-size-chart",
+    "components/halothemes/product/halo-product-tab-by-category-2",
+    "components/halothemes/product/halo-product-tab-by-category",
+    "components/halothemes/product/halo-product-temp",
+    "components/halothemes/product/halo-sample-product-1",
+    "components/halothemes/product/halo-sample-product-2",
+    "components/halothemes/product/halo-sticky-add-to-cart",
+    "components/halothemes/product/halo-videos",
+    "components/halothemes/search/halo-before-quick-results",
+    "components/halothemes/search/halo-quick-results-tmp-2",
+    "components/halothemes/search/halo-quick-results-tmp",
+    "components/halothemes/shipping/halo-calculate-free-shipping-tmp",
+    "components/halothemes/sidebar/halo-advertisement-content",
+    "components/halothemes/sidebar/halo-advertisement-image",
+    "components/halothemes/sidebar/halo-all-categories",
+    "components/halothemes/sidebar/halo-before-you-leave-tmp",
+    "components/halothemes/sidebar/halo-before-you-leave-search",
+    "components/halothemes/sidebar/halo-faqs-sidebar",
+    "components/halothemes/sidebar/halo-button-close",
+    "components/halothemes/sidebar/halo-product-sidebar-by-category",
+    "components/halothemes/sidebar/halo-product-sidebar-editor-pick",
+    "components/halothemes/sidebar/halo-product-sidebar-tmp-2",
+    "components/halothemes/sidebar/halo-product-sidebar-tmp-3",
+    "components/halothemes/sidebar/halo-product-sidebar-tmp",
+    "components/halothemes/sidebar/halo-product-sidebar",
+    "components/halothemes/sidebar/halo-side-block",
+    "components/halothemes/sidebar/halo-shop-by-brand",
+    "components/halothemes/sidebar/halo-recent-post",
+    "components/halothemes/sidebar/halo-tags",
     "components/products/add-to-cart",
     "components/products/bulk-discount-rates",
-    "components/products/carousel-3",
-    "components/products/carousel-2",
     "components/products/card",
+    "components/products/carousel-2",
+    "components/products/carousel-3",
     "components/products/carousel",
     "components/products/description-tabs-2",
     "components/products/description-tabs",
     "components/products/description",
     "components/products/featured",
-    "components/products/grid",
     "components/products/filter",
+    "components/products/grid",
     "components/products/list-item",
     "components/products/list",
     "components/products/new",
     "components/products/no-carousel-2",
     "components/products/no-carousel",
-    "components/products/price",
     "components/products/price-range",
+    "components/products/price",
     "components/products/product-aria-label",
     "components/products/product-badge",
     "components/products/product-view",
@@ -1287,13 +1370,13 @@
     "components/products/related",
     "components/products/reviews",
     "components/products/schema",
-    "components/products/similar-by-view",
     "components/products/tabs",
+    "components/products/similar-by-view",
     "components/products/top",
     "components/products/videos",
     "components/products/customizations/checkbox",
-    "components/products/customizations/file",
     "components/products/customizations/select",
+    "components/products/customizations/file",
     "components/products/customizations/text",
     "components/products/customizations/textarea",
     "components/products/modals/writeReview",
@@ -1303,109 +1386,65 @@
     "components/products/options/input-numbers",
     "components/products/options/input-text",
     "components/products/options/product-list",
+    "components/products/options/set-radio",
     "components/products/options/set-rectangle",
     "components/products/options/set-select",
-    "components/products/options/set-radio",
-    "components/products/options/swatch",
     "components/products/options/textarea",
-    "components/halothemes/ask-an-expert/halo-ask-an-expert-form",
-    "components/halothemes/ask-an-expert/halo-ask-an-expert",
-    "components/halothemes/cart/halo-cart-secure-image",
-    "components/halothemes/brand/halo-all-brands",
-    "components/halothemes/brand/halo-azbrand",
-    "components/halothemes/category/halo-subcategories",
-    "components/halothemes/configure-options/date",
-    "components/halothemes/configure-options/input-checkbox",
-    "components/halothemes/configure-options/input-file",
-    "components/halothemes/configure-options/input-numbers",
-    "components/halothemes/configure-options/input-text",
-    "components/halothemes/configure-options/product-list",
-    "components/halothemes/configure-options/set-radio",
-    "components/halothemes/configure-options/set-rectangle",
-    "components/halothemes/configure-options/swatch",
-    "components/halothemes/configure-options/set-select",
-    "components/halothemes/configure-options/textarea",
-    "components/halothemes/header/halo-megamenu-theme-file",
-    "components/halothemes/header/halo-megamenu",
-    "components/halothemes/gallery/halo-product-paginator",
-    "components/halothemes/gallery/halo-show-products",
-    "components/halothemes/gallery/halo-toolbar",
-    "components/halothemes/gallery/halo-view-as",
-    "components/halothemes/gallery/halo-view-as-2",
-    "components/halothemes/fbt-options/date",
-    "components/halothemes/fbt-options/input-checkbox",
-    "components/halothemes/fbt-options/input-file",
-    "components/halothemes/fbt-options/input-numbers",
-    "components/halothemes/fbt-options/product-list",
-    "components/halothemes/fbt-options/set-radio",
-    "components/halothemes/fbt-options/set-rectangle",
-    "components/halothemes/fbt-options/set-select",
-    "components/halothemes/fbt-options/swatch",
-    "components/halothemes/fbt-options/input-text",
-    "components/halothemes/fbt-options/textarea",
-    "components/halothemes/global/halo-before-you-leave",
-    "components/halothemes/global/halo-global",
-    "components/halothemes/global/halo-newsletter-popup",
-    "components/halothemes/global/halo-recently-viewed-products",
-    "components/halothemes/home/home-recent-posts",
-    "components/halothemes/home/home-subscription-form",
-    "components/halothemes/lookbook/halo-home-lookbook-tmp",
-    "components/halothemes/lookbook/halo-lookbook-tmp",
-    "components/halothemes/map/halo-google-map",
-    "components/halothemes/shipping/halo-calculate-free-shipping-tmp",
-    "components/halothemes/page/halo-page-template",
-    "components/halothemes/product/halo-add-option-for-product-card",
-    "components/halothemes/product/halo-add-option-for-product-swatch",
-    "components/halothemes/product/halo-before-you-leave-temp",
-    "components/halothemes/product/halo-bundle-products-options",
-    "components/halothemes/product/halo-bundle-products-tmp",
-    "components/halothemes/product/halo-bundle-products",
-    "components/halothemes/product/halo-compare-colors",
-    "components/halothemes/product/halo-next-products-tmp",
-    "components/halothemes/product/halo-next-products",
-    "components/halothemes/product/halo-notify-me-out-of-stock",
-    "components/halothemes/product/halo-product-ask-an-expert",
-    "components/halothemes/product/halo-product-countdown",
-    "components/halothemes/product/halo-product-recommended-block",
-    "components/halothemes/product/halo-product-security-image",
-    "components/halothemes/product/halo-product-size-chart",
-    "components/halothemes/product/halo-product-tab-by-category-2",
-    "components/halothemes/product/halo-product-temp",
-    "components/halothemes/product/halo-product-tab-by-category",
-    "components/halothemes/product/halo-sample-product-1",
-    "components/halothemes/product/halo-sample-product-2",
-    "components/halothemes/product/halo-sticky-add-to-cart",
-    "components/halothemes/product/halo-videos",
-    "components/halothemes/search/halo-before-quick-results",
-    "components/halothemes/search/halo-quick-results-tmp-2",
-    "components/halothemes/search/halo-quick-results-tmp",
-    "components/halothemes/sidebar/halo-advertisement-content",
-    "components/halothemes/sidebar/halo-advertisement-image",
-    "components/halothemes/sidebar/halo-all-categories",
-    "components/halothemes/sidebar/halo-before-you-leave-search",
-    "components/halothemes/sidebar/halo-before-you-leave-tmp",
-    "components/halothemes/sidebar/halo-button-close",
-    "components/halothemes/sidebar/halo-faqs-sidebar",
-    "components/halothemes/sidebar/halo-product-sidebar-by-category",
-    "components/halothemes/sidebar/halo-product-sidebar-editor-pick",
-    "components/halothemes/sidebar/halo-product-sidebar-tmp-2",
-    "components/halothemes/sidebar/halo-product-sidebar-tmp-3",
-    "components/halothemes/sidebar/halo-product-sidebar-tmp",
-    "components/halothemes/sidebar/halo-recent-post",
-    "components/halothemes/sidebar/halo-product-sidebar",
-    "components/halothemes/sidebar/halo-shop-by-brand",
-    "components/halothemes/sidebar/halo-side-block",
-    "components/halothemes/sidebar/halo-tags",
-    "components/halothemes/options-sticky-cart/date",
-    "components/halothemes/options-sticky-cart/input-checkbox",
-    "components/halothemes/options-sticky-cart/input-file",
-    "components/halothemes/options-sticky-cart/input-numbers",
-    "components/halothemes/options-sticky-cart/input-text",
-    "components/halothemes/options-sticky-cart/product-list",
-    "components/halothemes/options-sticky-cart/set-radio",
-    "components/halothemes/options-sticky-cart/set-rectangle",
-    "components/halothemes/options-sticky-cart/set-select",
-    "components/halothemes/options-sticky-cart/textarea",
-    "components/halothemes/options-sticky-cart/swatch"
+    "components/products/options/swatch",
+    "pages/blog",
+    "pages/blog-post",
+    "pages/brand",
+    "pages/brands",
+    "pages/cart",
+    "pages/category",
+    "pages/checkout",
+    "pages/compare",
+    "pages/contact-us",
+    "pages/home",
+    "pages/page",
+    "pages/order-confirmation",
+    "pages/product",
+    "pages/sitemap",
+    "pages/subscribed",
+    "pages/search",
+    "pages/unsubscribe",
+    "pages/auth/account-created",
+    "pages/auth/create-account",
+    "pages/auth/forgot-password",
+    "pages/auth/login",
+    "pages/auth/new-password",
+    "pages/errors/403",
+    "pages/errors/404",
+    "pages/errors/generic",
+    "pages/gift-certificate/purchase",
+    "pages/gift-certificate/redeem",
+    "pages/gift-certificate/balance",
+    "pages/unavailable/hibernation",
+    "pages/unavailable/maintenance",
+    "pages/account/add-address",
+    "pages/account/add-payment-method",
+    "pages/account/add-return",
+    "pages/account/download-item",
+    "pages/account/addresses",
+    "pages/account/add-wishlist",
+    "pages/account/edit-payment-method",
+    "pages/account/edit",
+    "pages/account/inbox",
+    "pages/account/payment-methods",
+    "pages/account/wishlist-details",
+    "pages/account/returns",
+    "pages/account/recent-items",
+    "pages/account/return-saved",
+    "pages/account/wishlists",
+    "pages/account/orders/all",
+    "pages/account/orders/completed",
+    "pages/account/orders/details",
+    "pages/account/orders/invoice",
+    "pages/custom/page/faq-layout",
+    "pages/custom/page/faq",
+    "pages/custom/page/home-landing-page",
+    "pages/custom/page/location-layout",
+    "pages/custom/page/lookbook-layout",
+    "pages/custom/page/productdocumentation"
   ]
 }

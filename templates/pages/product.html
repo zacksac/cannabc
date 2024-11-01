@@ -202,8 +202,7 @@ gql: 'query productById($productId: Int!) {
                 {{#if key '==' 'cbann'}}
                
                 {{#JSONparse value}}
-                     <img class="desk_show" src="{{bands}}">
-        <img class="mob_show" style="display:none;" src=" {{banmo}}">
+                     {{bands}}
                     
                    
                      {{/JSONparse}} 
@@ -233,6 +232,7 @@ gql: 'query productById($productId: Int!) {
                     <div class="abcone">
                              <h3>{{lflt}}</h3>
                              <span>{{lfst}}</span> 
+                             <h5 style="background: {{percolor}};">{{pertext}}</h5>
                             </div>
 
                             <div class="abctwo">
@@ -753,10 +753,28 @@ a.adl {
 
 
 
+.p_banner {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 50px;
+    line-height: 60px;
+    font-family: 'Roboto Condensed';
+    margin-bottom: 0;
+    font-weight:bold;
+}
 
 
-
-
+.abcone h5 {
+    color: white;
+    font-size: 18px;
+    font-family: roboto condensed;
+    border-radius: 12px;
+    width: 48%;
+    padding: 8px 10px;
+    margin: 0;
+    margin-top: 20px;
+    font-weight: bold;
+}
 
 
 
@@ -765,6 +783,15 @@ a.adl {
 
 
 @media(max-width:768px){
+    .p_banner {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 50px;
+    line-height: 32px;
+    font-family: 'Roboto Condensed';
+    margin-bottom: 0;
+    font-weight: bold;
+}
 
     .pfcon {
     display: grid;
