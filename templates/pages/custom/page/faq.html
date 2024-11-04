@@ -174,7 +174,7 @@
               var metafieldsjson=$.parseJSON(value.node.value);
    $.each( metafieldsjson, function( key, value ) {
     var qs=value.fques;
-    var as=value.fans;
+    var as=value.fqans;
     var strc=' <div class="accordion_head"> '+qs+' <span class="plusminus">+</span></div> <div class="accordion_body" style="display: none;"> '+as+'</div>';
     $(".faq2 .accordion_container").append(strc);
    })
@@ -184,7 +184,7 @@
               var metafieldsjson=$.parseJSON(value.node.value);
    $.each( metafieldsjson, function( key, value ) {
     var qs=value.fques;
-    var as=value.fans;
+    var as=value.fqans;
     var strc=' <div class="accordion_head"> '+qs+' <span class="plusminus">+</span></div> <div class="accordion_body" style="display: none;"> '+as+'</div>';
     $(".faq3 .accordion_container").append(strc);
    })
@@ -194,7 +194,7 @@
               var metafieldsjson=$.parseJSON(value.node.value);
    $.each( metafieldsjson, function( key, value ) {
     var qs=value.fques;
-    var as=value.fans;
+    var as=value.fqans;
     var strc=' <div class="accordion_head"> '+qs+' <span class="plusminus">+</span></div> <div class="accordion_body" style="display: none;"> '+as+'</div>';
     $(".faq4 .accordion_container").append(strc);
    })
@@ -202,7 +202,21 @@
         })
 
 
-
+    $(".accordion_head").on('click', function() {
+    if ($('.accordion_body').is(':visible')) {
+      $(".accordion_body").slideUp(300);
+      $(".plusminus").text('+');
+    }
+    if ($(this).next(".accordion_body").is(':visible')) {
+      $(this).next(".accordion_body").slideUp(300);
+      $(this).children(".plusminus").text('+');
+      $(this).removeClass("active");
+    } else {
+      $(this).next(".accordion_body").slideDown(300);
+      $(this).children(".plusminus").text('-');
+      $(this).addClass("active");
+    }
+  });
 
 
   }) 
