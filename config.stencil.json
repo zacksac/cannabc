@@ -6,7 +6,10 @@
       "productdocumentation.html": "/product-documentation/",
       "faq.html":"/faq/",
       "discount.html":"/discount/",
-      "subscriptions.html":"/subscriptions/"
+      "subscriptions.html":"/subscriptions/",
+      "wholesale-inquiry.html":"/wholesale-inquiry",
+      "contact-form.html":"/contact-form",
+      "moneyback.html":"/moneyback"
     },
     "product": {}
   },

@@ -936,9 +936,7 @@
     "afterpay-button-color": "black-mint",
     "amazon-button-color": "Gold",
     "masterpass-button-color": "black",
-    "paymentbuttons-provider-sorting": [
-
-    ]
+    "paymentbuttons-provider-sorting": []
   },
   "read_only_files": [
     "/assets/scss/components/citadel",
@@ -976,8 +974,7 @@
           "fashion_jewelry"
         ]
       },
-      "images": {
-      },
+      "images": {},
       "settings": {
         "halo_homepage_layout_1": true,
         "halo_homepage_layout_2": false,
@@ -1894,8 +1891,7 @@
           "home_garden"
         ]
       },
-      "images": {
-      },
+      "images": {},
       "settings": {
         "halo_homepage_layout_1": false,
         "halo_homepage_layout_2": true,
@@ -2789,9 +2785,7 @@
         "afterpay-button-color": "black-mint",
         "amazon-button-color": "Gold",
         "masterpass-button-color": "black",
-        "paymentbuttons-provider-sorting": [
-
-        ]
+        "paymentbuttons-provider-sorting": []
       }
     },
     {
@@ -2812,8 +2806,7 @@
           "fashion_jewelry"
         ]
       },
-      "images": {
-      },
+      "images": {},
       "settings": {
         "halo_homepage_layout_1": false,
         "halo_homepage_layout_2": false,
@@ -3709,9 +3702,7 @@
         "afterpay-button-color": "black-mint",
         "amazon-button-color": "Gold",
         "masterpass-button-color": "black",
-        "paymentbuttons-provider-sorting": [
-
-        ]
+        "paymentbuttons-provider-sorting": []
       }
     },
     {
@@ -3732,8 +3723,7 @@
           "fashion_jewelry"
         ]
       },
-      "images": {
-      },
+      "images": {},
       "settings": {
         "halo_homepage_layout_1": false,
         "halo_homepage_layout_2": false,
@@ -4628,9 +4618,7 @@
         "afterpay-button-color": "black-mint",
         "amazon-button-color": "Gold",
         "masterpass-button-color": "black",
-        "paymentbuttons-provider-sorting": [
-
-        ]
+        "paymentbuttons-provider-sorting": []
       }
     }
   ]
