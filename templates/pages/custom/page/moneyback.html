@@ -535,3 +535,132 @@ div.form-header-group.hasImage {
 {{/partial}}
 
 {{> layout/base}}
+
+
+
+
+<style>
+
+  body {
+    background: transparent;
+}
+.header-large h1.form-header {
+    font-size: 42px;
+    color: black;
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+}.header-large h1 + .form-subHeader {
+    font-size: 14px;
+    color: black;
+    font-weight: normal;
+}
+
+
+.form-section input {
+    border: 2px solid black;
+    padding: 20px;
+    line-height: 22px;
+    display: inline-block;
+    font-weight: normal;
+}.form-section input::placeholder {
+    color: black;
+    font-family: 'Roboto';
+}
+.form-dropdown:required:invalid {
+    color: black;
+    font-weight: normal;
+    border: 1px solid black;
+    
+}
+
+.form-multiple-column label {
+    display: block !important;
+}
+.form-dropdown {
+    min-height: 45px;
+}
+.form-all {
+    max-width: 1100px;
+    width: 100%;
+}.submit-button {
+    min-width: 100%;
+    border-radius: 12px !important;
+}.form-all {
+    border-radius: 3px;
+    box-shadow: unset;
+    background-color: #fff;
+    max-width: 752px !!important;
+}.form-header-group {
+    border-bottom: unset;
+    padding: 14px;
+    margin-top: 1.25em;
+    margin-bottom: .75em;
+}.form-buttons-wrapper, .form-pagebreak, .form-submit-clear-wrapper {
+    border-color: transparent;
+}.header-large h1 + .form-subHeader {
+    font-size: 14px;
+    color: black;
+    font-weight: normal;
+    max-width: 740px;
+    margin: 0 auto;
+    line-height: 24px;
+}
+
+.form-multiple-column {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.form-multiple-column  label {
+    border: 1px solid #d8d8d8;
+}
+
+span.labelauty-checked-image {
+    display: none;
+}
+
+span.form-checkbox-item label {
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+
+.submit-button {
+    min-width: 100%;
+    border-radius: 12px !important;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+
+.form-checkbox+label:before, .form-checkbox+span:before, .form-radio+label:before, .form-radio+span:before {
+    background-color: #fff;
+    border-color: black;
+    border: 2px solid;
+    width: 58px;
+    height: 26px;
+    border-radius: unset;
+}
+
+.form-radio-item .form-radio + label, .form-radio-item .form-radio + span {
+    padding-left: 80px;
+}
+
+.form-radio+label:after, .form-radio+label div:after, .form-radio+span:after, .form-radio+span div:after {
+    top: 0;
+    left: 0;
+    width: 56px;
+    height: 24px;
+    content: "";
+    position: absolute;
+    border-radius: unset;
+}
+
+
+  </style>
+
+
+ 
