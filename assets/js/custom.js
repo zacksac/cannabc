@@ -1,4 +1,14 @@
+$(document).on('click touchstart', '.getmec label', function (e){
 
+
+  console.log("labelclick..")
+  $(this).closest(".getmec").find("label").removeClass("active");
+  $(this).addClass("active");
+var gid=$(this).attr("id");
+    console.log(gid);
+    $(this).closest(".getcri").find(".getmecon .getcc").hide();
+    $(this).closest(".getcri").find("."+gid).fadeIn(500);
+})
 
 
 

@@ -44,6 +44,10 @@ blog:
 
             {{{region name="home_banner_6"}}}
 
+            <div class="homerview">
+                <div class="yotpo-widget-instance" data-yotpo-instance-id="965568" data-yotpo-product-id="{{ product.id }}"></div>
+            </div>
+
             {{#if theme_settings.home_product_block_tab '==' 'Featured'}}
                 {{> components/halothemes/product/halo-product-tab-by-category 
                     data-sort-tab="?sort=featured" 
@@ -65,6 +69,8 @@ blog:
             {{/if}}
 
             {{{region name="home_banner_7"}}}
+
+
         <div class="hb" style="display:none;">
             {{#if theme_settings.home_product_block-1 '==' 'Featured'}}
                 {{> components/products/featured

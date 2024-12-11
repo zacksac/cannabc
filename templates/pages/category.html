@@ -114,6 +114,231 @@ products:
                         <div class="footer-cetgory-product productGrid col-{{theme_settings.product_list_display_col}}"></div>
                     {{/if}}
                 </div>
+               
+
+
+                <div class="gettok">
+                    <h4></h4>
+                    <div class="prod_logos deskshow">
+                    <div class="row prod-imgs">
+    
+                       
+                        
+                     
+                      
+                      
+                      </div>
+                    </div>
+
+
+                   
+
+                   <div class="getc">
+                        <div class="getcli">
+                            
+                        </div>
+                        <div class="getcri">
+                            <div class="getmec">
+                                <div class="tabsx">
+                                    <input type="radio" id="radio-10" name="tabs0" checked="">
+                                    <label id="getc1" class="tabo active" for="radio-10">BENEFITS</label>
+                                    <input type="radio" id="radio-20" name="tabs0">
+                                    <label id="getc2" class="tabo" for="radio-20">DOCUMENTATION</label>
+                                    <input type="radio" id="radio-30" name="tabs0">
+                                    <label id="getc3" class="tabo" for="radio-30">DISCLAIMERS</label>
+                                    <span class="glider10"></span>
+                                </div>
+                            </div>
+                            <style>
+                                input[id="radio-10"]:checked ~ .glider10 {
+                              transform: translateX(0);
+                                }
+                                input[id="radio-20"]:checked ~ .glider10 {
+                                  transform: translateX(100%);
+                                }
+                                input[id="radio-30"]:checked ~ .glider10 {
+                                  transform: translateX(200%);
+                                } 
+                                    
+                                    .glider10 {
+                                  position: absolute;
+                                  display: flex;
+                                  height: 54px;
+                                  width:150px;
+                                  background-color: black;
+                                 z-index:1 !important;
+                                  border-radius: 99px;
+                                  transition: 0.25s ease-out;
+                                }
+                            
+                            
+                                @media (min-width: 768px) and (max-width: 1024px) {
+                                  
+                                  .glider10 {
+                                      position: absolute;
+                                      display: flex;
+                                      height: 54px;
+                                      width: 140px;
+                                      
+                                      z-index: 1;
+                                      border-radius: 99px;
+                                      transition: 0.25s ease-out;
+                                  }
+                                }
+                            
+                            
+                                   @media (min-width: 1024px) and (max-width: 6000px) {
+                                      getmecon p {padding-right: 20px;}
+                                   }
+                            
+                            
+                                    @media (min-width: 1024px) and (max-width: 1300px) {
+                                      
+                                           .getcli {
+                                display: flex;
+                            }
+                            .gettok {
+                                border-top: 3px solid #cccccc;
+                                padding-top: 35px;
+                                width: 96% !important; 
+                                margin: 0 auto;
+                                margin-bottom: 65px;
+                            }
+                                      .getc {
+                                margin-top: 20px;
+                                display: grid;
+                                grid-template-columns: 45% 48%;
+                                grid-gap: 20px !important;
+                                border: 3px solid;
+                                border-radius: 16px;
+                            }
+                                      
+                                  .glider10 {
+                                position: absolute;
+                                display: flex;
+                                height: 54px;
+                                width: 140px;
+                                
+                                z-index: 1;
+                                border-radius: 99px;
+                                transition: 0.25s ease-out;
+                            }
+                                        .tabo {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                height: 52px;
+                                width: 140px;
+                                font-size: 1.25rem;
+                                font-weight: 500;
+                                border-radius: 99px;
+                                cursor: pointer;
+                                transition: color 0.15s ease-in;
+                                font-weight: bold;
+                                letter-spacing: 1px;
+                                font-size: 14px;
+                            }
+                                }
+                            
+                            
+                                   @media (min-width: 1300px) and (max-width: 1700px) {
+                                     .getcli {
+                                display: flex;
+                            }
+                            .gettok {
+                                border-top: 3px solid #cccccc;
+                                padding-top: 35px;
+                                width: 90% !important;
+                                margin: 0 auto;
+                                margin-bottom: 65px;
+                            }.tabo {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                height: 54px;
+                                width: 169px;
+                                font-size: 1.25rem;
+                                font-weight: 500;
+                                border-radius: 99px;
+                                cursor: pointer;
+                                transition: color 0.15s ease-in;
+                                font-weight: bold;
+                                letter-spacing: 2px;
+                                font-size: 14px;
+                            }  .glider10 {
+                                position: absolute;
+                                display: flex;
+                                height: 54px;
+                                width: 150px;
+                                
+                                z-index: 1;
+                                border-radius: 99px;
+                                transition: 0.25s ease-out;
+                            }
+                            
+                                   }
+                            
+                            
+                                @media(max-width:768px){
+                            
+                                label[for=radio-10].active ~ .glider10 {
+                                transform: translateX(0%);
+                            }
+                              label[for=radio-20].active ~ .glider10 {
+                                transform: translateX(100%);
+                            }  label[for=radio-30].active ~ .glider10 {
+                                transform: translateX(200%);
+                            }
+                            
+                                  .tabo.active {
+                                color: white !important;
+                            }
+                                .glider10 {
+                                position: absolute;
+                                display: flex;
+                                height: 54px;
+                                width: 97px;
+                                
+                                z-index: 1;
+                                border-radius: 99px;
+                                transition: 0.25s ease-out;
+                            }
+                                  input[type="radio"]:checked + label {
+                                color: unset;
+                            }
+                                }
+                            </style>
+                            <div class="getmecon">
+                                <div class="getc1 getcc">
+                                    
+
+
+                                </div>
+                                <div class="getc2 getcc" style="display:none;">
+                                    <p><strong>The Documentation</strong></p>
+                                    <p>
+                                        <br>
+                                    </p>
+                                    <p>At Canna River, product safety is at the core of who we are. As a brand, we insist on going above and beyond in not only the frequency and manner in which we test our products, but also, the transparency we exhibit for our customers and
+                                        wholesalers.</p>
+
+                                    <a class="get2cl" href="https://www.cannariver.com/pages/product-documentation#Gummy">VIEW DOCUMENTATION</a>
+
+                                </div>
+                                <div class="getc3 getcc" style="display:none;">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
 
                 {{{region name="home_category_text--global"}}}
                 {{{region name="home_category_text"}}}
@@ -124,3 +349,520 @@ products:
     </div>
 {{/partial}}
 {{> layout/base}}
+
+
+
+
+<script>
+    function get_meta(ctid){
+    var xx='{{category.id}}';
+    var query=`query MyQuery {
+  site {
+    category(entityId: `+xx+`) {
+      metafields(namespace: "ct_metafields", keys: ["badges","gtknow"] ) {
+        edges {
+          node {
+            key
+            value
+          }
+        }
+      }
+      id
+    }
+  }
+}`;
+    console.log(xx);
+      fetch('/graphql', {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer {{ settings.storefront_api.token }}' // use auto-generated token
+    },
+    body: JSON.stringify({
+      query: query
+    })
+  })
+
+  .then(res => res.json())
+  .then(function(data){
+       data => data.json();
+       console.log(data.data.site.category.metafields.edges)
+      var edg=data.data.site.category.metafields.edges;
+
+$.each( edg, function( key, value ) {
+    //console.log(value)
+ if(value.node.key=="badges"){
+   var  tt=this.node.value;
+  
+  tt=$.parseJSON(tt);
+ 
+ $.each( tt, function( key, value ) {
+   
+    $(".prod-imgs").append(' <div class="column"> <img src="'+value.bdimg+'" alt="Pricing" style="width:100%"> </div>');
+ })
+
+ }
+ else if(value.node.key=="gtknow"){
+var  ttt=this.node.value;
+ttt=$.parseJSON(ttt);
+console.log(ttt);
+          var bnft=ttt.bnft;
+          $(".getc1").html(bnft);
+          console.log(bnft);
+          var dc=ttt.dc;
+          $(".getc2").html(dc);
+
+          var imgleft=ttt.imgleft;
+          $(".getcli").html('<img src="'+imgleft+'">');
+            var dclink=ttt.dclink;
+
+          $('.getc2').append('<a class="get2cl" href="'+dclink+'">VIEW DOCUMENTATION</a>')
+
+          var lg= ttt.lg;
+          $(".getc3").html(lg);
+          var tit= ttt.tit;
+          $(".gettok > h4").html(tit);
+
+ }
+
+
+});
+
+  }) // will log JSON result to browser console
+  .catch(error => console.error(error));
+
+}
+
+
+  const $productId = '{{category.id}}';
+  console.log($productId);
+  var ctid=$productId;
+  get_meta(ctid);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style> @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+  input[type="radio"]:checked + label {
+  color: white;
+}
+  .tabsx * {
+  z-index: 2;
+}
+  .containero {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tabsx {
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+  padding: 0.75rem;
+  border-radius: 99px;
+  border:2px solid;
+}
+
+input[type="radio"] {
+  display: none;
+}
+.tabo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  width: 200px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+}
+.notificationo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.75rem;
+  border-radius: 50%;
+  background-color: #e6eef9;
+  transition: 0.15s ease-in;
+}a.get2cl {
+    font-family: inherit;
+    background: #006eff;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 12px;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+input[type="radio"]:checked + label > .notification {
+  background-color: black;
+  color: #fff;
+}
+input[id="radio-1"]:checked ~ .glider {
+  transform: translateX(0);
+}
+input[id="radio-2"]:checked ~ .glider {
+  transform: translateX(100%);
+}
+input[id="radio-3"]:checked ~ .glider {
+  transform: translateX(200%);
+}
+.glider {
+  position: absolute;
+  display: flex;
+  height: 54px;
+  width: 200px;
+  background-color: black;
+ 
+  border-radius: 99px;
+  transition: 0.25s ease-out;
+}
+  .tabo.active {
+    color: white;
+}
+.tabo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    width: 150px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.getc {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 40px;
+}
+.getc {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 50% 46%;
+    grid-gap: 40px;
+    border: 0px solid grey;
+    border-radius: 16px;
+    box-shadow: 0px 0px 6px grey;
+}.getmec {
+    width: auto;
+    
+    margin-top: 40px;
+    padding: 12px;
+    border-radius: 12px;
+}.getmec {
+    width: auto;
+   
+    margin-top: 40px;
+    padding: 5px 12px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}.getmec p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    padding: 8px 22px;
+    border-radius: 12px;
+    cursor: pointer;
+}.getmec p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    padding: 8px 22px;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 80%;
+    text-align: center;
+}.getmecon strong {
+    font-size: 32px;
+    color: black;
+}.getmecon p {
+    margin-bottom: 5px;
+    color: black;
+}
+.getmecon {
+  margin-bottom: 20px;
+}
+.faqc h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.faqc h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 42px;
+}.faqc {
+    margin-top: 60px;
+    padding-top: 20px;
+}.getcli img {
+    border-radius: 14px;
+}
+.getcli img {
+    border-radius: 14px;
+    display: block;
+    object-fit: cover;
+}
+
+.getmec p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+.getmec p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    padding: 8px 22px;
+    border-radius: 12px;
+}.getmec p.active {
+    background: black;
+    color: white;
+    padding: 8px 26px;
+}
+ .row.prod-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    align-items: center;
+}
+.prod-imgs img {
+    max-width: 160px;
+}.gettok h4 {
+    text-align: center;
+    font-size: 42px;
+    letter-spacing: 2px;
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+}.gettok {
+    border-top: 3px solid #cccccc;
+    padding-top: 35px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 65px;
+}span.pin {
+    color: #f2499c;
+    margin-right: 8px;
+}
+
+@media (max-width: 767px) {
+                      
+  .t4s-product-inner.t4s-pr.t4s-oh {
+      padding: 0;
+    }
+                      
+}
+
+
+
+
+@media(max-width:1780px){
+    .getc {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 44% 46%;
+    grid-gap: 40px;
+    border: 0px solid grey;
+    border-radius: 16px;
+    box-shadow: 0px 0px 6px grey;
+}
+}
+
+@media(max-width:1500px){
+    .tabo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    width: 135px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+}
+
+
+@media(max-width:768px){
+    .getc {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    border: 0px solid grey;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+    .gettok h4 {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-top: 40px;
+}.getmec {
+    width: auto;
+    border: none;
+    margin-top: 15px;
+    padding: 5px 12px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 17px;
+    flex-direction: column;
+    align-items: center;
+}.getmecon {
+    padding: 0 20px;
+}.tabo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    width: 97px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 10px;
+}.tabo.active {
+    color: white !important;
+}.tabsx {
+    transform: unset;
+}
+.getc {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr !important;
+    grid-gap: 20px;
+    border: 0px solid grey;
+    border-radius: 16px;
+    box-shadow: 0px 0px 6px grey;
+}
+.gettok {
+    border-top: 3px solid #cccccc;
+    padding-top: 35px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 65px;
+}
+}
+
+
+
+  </style>
+  <style>
+
+  .t4s-container {
+    padding: 0 15%;
+}
+  .t4s-product-info__inner {
+    text-align: left !important;
+}.template-collection .yotpo-display-wrapper {
+    /* margin: 0 auto; */
+    text-align: center;
+    justify-content: left !important;
+    display: flex;
+}
+
+  .t4s-product-inner.t4s-pr.t4s-oh {
+    background: #ededed;
+    padding: 20px;
+    border-radius: 22px;
+}
+  .template-collection .t4s-product .t4s-product-inner {
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px 20px 0 0px !important;
+}
+a.v_prod {
+    display: block;
+    width: 100%;
+    background: red;
+    position: relative;
+    text-align: center;
+    padding: 7px 0px;
+    line-height: unset;
+    height: unset;
+    bottom: 0;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0px 0px 20px 20px;
+}
+  h3.t4s-product-title.aaa {
+    padding-top: 0px;
+}
+  .yotpo .yotpo-bottomline .yotpo-icon-star, .yotpo .yotpo-bottomline .yotpo-icon-half-star, .yotpo .yotpo-bottomline .yotpo-icon-empty-star {
+    color: black;
+}
+  h3.t4s-product-title.aaa a {
+    font-size: 24px !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 36px;
+}
+  #shopify-section-template--16581573640285__main .t4s-product .t4s-product-title a:hover, #shopify-section-template--16581573640285__main .t4s-product .t4s-product-price {
+    font-size: 20px;
+   
+   
+}
+.t4s-product .t4s-product-price {
+    color: #757575 !important;
+    font-weight: bold;
+    line-height: 22px;
+}
+  #shopify-section-template--16581573640285__main .t4s-product .t4s-product-title a:hover, #shopify-section-template--16581573640285__main .t4s-product .t4s-product-price {
+    font-size: 24px;
+}
+  .t4s-justify-content-center {
+    justify-content: left !important;
+}
+
+
+
+</style>
+<style> #shopify-section-template--17450990108765__main .t4s-product .t4s-product-title a {font-size: 20px;} #shopify-section-template--17450990108765__main .t4s-product .t4s-product-title a:hover, #shopify-section-template--17450990108765__main .t4s-product .t4s-product-price {font-size: 22px;} #shopify-section-template--17450990108765__main .t4s-container-xl, #shopify-section-template--17450990108765__main .t4s-container-lg, #shopify-section-template--17450990108765__main .t4s-container-md, #shopify-section-template--17450990108765__main .t4s-container-sm, #shopify-section-template--17450990108765__main .t4s-container {max-width: 100%;} @media (max-width: 767px) {#shopify-section-template--17450990108765__main .t4s-product .t4s-product-title a {font-size: 14px; font-weight: bold; } #shopify-section-template--17450990108765__main .t4s-product .t4s-product-price {font-size: 14px; } #shopify-section-template--17450990108765__main h3 {margin: 0 10px; }} </style>
