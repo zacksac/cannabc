@@ -19,7 +19,7 @@
     {{/or}}"
     data-product-variant="single-product-option"
 >
-    <div class="halo-productView-left productView-images zoom-image" data-image-gallery>
+    <div class="halo-productView-left productView-images " data-image-gallery>
         <div class="productView-images-wrapper">
             <div class="productView-image-wrapper">
                 {{#if theme_settings.halo-label-product}}
@@ -83,7 +83,7 @@
                                 href="{{getImageSrcset this (cdn ../theme_settings.default_image_product) 1x=../theme_settings.zoom_size}}" 
                                 data-image-gallery-main
                                 data-image-gallery-main-quick-view
-                                data-zoom-image="{{getImageSrcset this (cdn ../theme_settings.default_image_product) 1x=../theme_settings.zoom_size}}"
+                                
                                 data-image-gallery-new-image-url="{{getImageSrcset this use_default_sizes=true}}"
                                 data-image-gallery-new-image-srcset="{{getImageSrcset this use_default_sizes=true}}">
                                 <div class="productView-img-container">
@@ -134,7 +134,7 @@
                                 data-fancybox="images_mobile"
                                 href="{{getImageSrcset this (cdn ../theme_settings.default_image_product) 1x=../theme_settings.zoom_size}}" 
                                 data-image-gallery-main
-                                data-zoom-image="{{getImageSrcset this (cdn ../theme_settings.default_image_product) 1x=../theme_settings.zoom_size}}">
+                                >
                                 <div class="productView-img-container">
                                     <a href="{{getImageSrcset this (cdn ../theme_settings.default_image_product) 1x=../theme_settings.zoom_size}}">
                                         {{> components/common/responsive-img
@@ -184,9 +184,9 @@
                     "dots": false,
                     "infinite": false,
                     "focusOnSelect": true,
-                    "vertical": true,
-                    "verticalSwiping": true,
-                    "slidesToShow": 6,
+                    "vertical": false,
+                    "verticalSwiping": false,
+                    "slidesToShow": 4,
                     "slidesToScroll": 1,
                     "asNavFor": ".halo-productView .halo-productView-left .productView-nav",
                     "nextArrow": "<svg class=&apos;slick-next slick-arrow&apos;><use xlink:href=&apos;#slick-arrow-next&apos;></use></svg>", 
@@ -389,6 +389,20 @@
                                 </span>
                             </div>
                         {{/all}}
+
+
+                          <div class="productView-price">
+                        {{#or customer (unless settings.hide_price_from_guests)}}
+                            {{> components/products/price price=product.price}}
+                        {{else}}
+                            {{> components/common/login-for-pricing}}
+                        {{/or}}
+                        {{#if product.call_for_price}}
+                            <p><span>{{product.call_for_price}}</span></p>
+                        {{/if}}
+                    </div>
+
+
                         {{#if product.min_purchase_quantity}}
                             <div class="productView-info-item">
                                 <span class="productView-info-name">{{lang 'products.min_purchase_quantity'}}</span>
@@ -443,16 +457,7 @@
                         {{/if}}
                     </div>
                     {{> components/halothemes/product/halo-product-countdown custom_fields=product.custom_fields id=product.id non_sale_price_with_tax=product.price.non_sale_price_with_tax non_sale_price_without_tax=product.price.non_sale_price_without_tax}}
-                    <div class="productView-price">
-                        {{#or customer (unless settings.hide_price_from_guests)}}
-                            {{> components/products/price price=product.price}}
-                        {{else}}
-                            {{> components/common/login-for-pricing}}
-                        {{/or}}
-                        {{#if product.call_for_price}}
-                            <p><span>{{product.call_for_price}}</span></p>
-                        {{/if}}
-                    </div>
+                   
                     {{{region name="product_below_price"}}}
                     
                     {{#if product.detail_messages}}
@@ -499,6 +504,14 @@
                                 {{> components/halothemes/product/halo-product-ask-an-expert}}
                             </div>
                         </div>
+
+
+
+
+                        
+
+
+
                         {{#if product.options}}
                             {{> components/products/add-to-cart}}
                         {{else}}

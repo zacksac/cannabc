@@ -16,10 +16,10 @@ products:
 {{#partial "page"}}
 
 <div class="container--medium">
-    <div class="breadcrumb-wrapper">
+    <div class="breadcrumb-wrapper" style="display:none;">
         {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
     </div>
-    <div class="page-header">
+    <div class="page-header" style="display:none;">
         {{#unless theme_settings.hide_blog_page_heading }}
             <h1 class="page-heading">{{ blog.name }}</h1>
         {{/unless}}
@@ -27,7 +27,7 @@ products:
 
     <div class="page page-blog">
         {{#if theme_settings.halo-blog-sidebar}}
-            <aside class="page-sidebar">
+            <aside class="page-sidebar" style="display:none;">
                 <div class="page-sidebar-close">
                     <span class="title">{{lang 'common.sidebar'}}</span>
                     <a href="#" class="close">
@@ -55,10 +55,11 @@ products:
                     </div>
                 </div>
             {{/if}}
-
+          <div class="blogcontainer">
             {{#each blog.posts}}
                 {{> components/blog/post post=this}}
             {{/each}}
+        </div>
 
             {{> components/common/paginator pagination.blog}}
         </main>
@@ -67,3 +68,105 @@ products:
 
 {{/partial}}
 {{> layout/base}}
+
+
+
+
+<style>
+
+.blogcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    grid-gap: 30px;
+}.blog + .blog {
+    padding-top: unset;
+}.page-blog .page-sidebar + .page-content {
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 0;
+    padding-right: 0;
+}.blog {
+    margin: unset;
+    width: 100%;
+}
+figure.blog-thumbnail img {
+    position: absolute !important;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: opacity 0s, transform 2s !important;
+}
+figure.blog-thumbnail img:hover{
+
+    transform:scale(1.1) ;
+}
+
+figure.blog-thumbnail:before {
+    position: absolute;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background-color: #ffffff4d;
+    content: "";
+    z-index: 2;
+    pointer-events: none;
+}
+figure.blog-thumbnail {
+    min-height: 443px;
+    overflow: hidden;
+}.blog-title a span {
+    font-family: 'Roboto Condensed';
+    font-size: 26px;
+}.blog-date, .blog-author {
+    color: #787878;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}.blog-post {
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}.blog-post .blog-post-btn .button {
+    display: inline-block;
+    margin-bottom: 0;
+    border-color: #cccccc;
+    text-transform: capitalize;
+    font-weight: normal;
+    min-width: 171px;
+    line-height: 47px;
+    font-size: 14px;
+}.page-blog .pagination {
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: end;
+    justify-content: center;
+}
+figure.blog-thumbnail:hover:before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .6s;
+}
+figure.blog-thumbnail {
+    min-height: 443px;
+}
+
+@media(max-width:768px){
+    .blogcontainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    grid-gap: 30px;
+}
+}
+</style>

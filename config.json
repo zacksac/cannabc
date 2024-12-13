@@ -1558,7 +1558,7 @@
         "halo-category-sidebar": true,
         "halo-brand-sidebar": true,
         "halo-search-sidebar": true,
-        "halo-blog-sidebar": true,
+        "halo-blog-sidebar": false,
         "halo-sidebar-all-categories": true,
         "halo-sidebar-shop-by-brand": true,
         "haloStickyToolbar": true,

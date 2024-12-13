@@ -5,8 +5,23 @@
     <p class="alertBox-column alertBox-message"></p>
 </div>
 <div class="productView-actions">
+
+     <div class="ncon">
+        <div class="productView-price">
+                        {{#or customer (unless settings.hide_price_from_guests)}}
+                            {{> components/products/price price=product.price}}
+                        {{else}}
+                            {{> components/common/login-for-pricing}}
+                        {{/or}}
+                        {{#if product.call_for_price}}
+                            <p><span>{{product.call_for_price}}</span></p>
+                        {{/if}}
+                        </div>
+
+
+
     <div class="form-field form-field--increments">
-        <label class="form-label" for="qty[]">{{lang 'products.quantity'}}</label>
+       
         <div class="form-increment" data-quantity-change>
             <button class="button button--icon" data-action="dec">
                 <span class="is-srOnly">{{lang 'products.quantity_decrease'}}</span>
@@ -27,6 +42,12 @@
             </button>
         </div>
     </div>
+
+   </div>
+
+
+
+
     <div class="form-actionFix">
         {{#or customer (unless settings.hide_price_from_guests)}}
             <div class="form-action" role="status" aria-live="polite">
