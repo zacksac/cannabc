@@ -91,7 +91,10 @@
 @import "custom";
 
 
-
+[data-content-region=home_policy_block--global] {
+    margin: 0!important;
+    display: none;
+}
 .minfo .accordion_head.active {
     background-color: unset;
 }.page-type-product .halo-productView {

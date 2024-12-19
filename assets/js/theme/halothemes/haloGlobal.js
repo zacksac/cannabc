@@ -622,7 +622,7 @@ export default function(context) {
                     breakpoint: 1399,
                     settings: {
                         arrows: true,
-                        slidesToShow: parseInt($context.themeSettings.home_product_block_tab_col)
+                        slidesToShow: 4
                     }
                 },
                 {
@@ -749,8 +749,8 @@ export default function(context) {
                             breakpoint: 1399,
                             settings: {
                                 arrows: true,
-                                slidesToShow: 5,
-                                slidesToScroll: 5
+                                slidesToShow: 4,
+                                slidesToScroll: 4
                             }
                         },
                         {
@@ -868,8 +868,8 @@ export default function(context) {
                     responsive: [{
                             breakpoint: 1599,
                             settings: {
-                                slidesToShow: 5,
-                                slidesToScroll: 5
+                                slidesToShow: 4,
+                                slidesToScroll: 4
                             }
                         },
                         {
